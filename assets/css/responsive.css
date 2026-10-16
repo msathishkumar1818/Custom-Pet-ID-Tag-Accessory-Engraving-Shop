@@ -1,0 +1,2441 @@
+/* ==========================================================================
+   RESPONSIVE STYLES
+   Custom Pet ID Tag & Accessory Engraving Shop
+   Breakpoints: 320px, 375px, 425px, 768px, 1024px, 1280px, 1440px
+   ========================================================================== */
+
+/* Large Desktop (1280px+) */
+@media (min-width: 1280px) {
+  .header-container {
+    padding: 0 2rem;
+  }
+}
+
+/* Ensure mobile drawer & backdrop can NEVER display on desktop (> 1024px) */
+@media (min-width: 1025px) {
+  .mobile-drawer,
+  .mobile-drawer-backdrop,
+  #mobile-drawer,
+  #mobile-drawer-backdrop {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateX(100%) !important;
+  }
+
+  [dir="rtl"] .mobile-drawer,
+  [dir="rtl"] #mobile-drawer {
+    transform: translateX(-100%) !important;
+  }
+}
+
+/* ==========================================================================
+   1. HOME PAGES: FULL VIEWPORT HEIGHT HERO SECTIONS
+   Occupies 100% of visible viewport height based on screen size
+   ========================================================================== */
+.hero-section,
+.hero-modern-section {
+  min-height: calc(100vh - var(--header-height)) !important;
+  min-height: calc(100dvh - var(--header-height)) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.hero-section .container-custom,
+.hero-modern-section .container-custom {
+  width: 100% !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* ==========================================================================
+   2. NON-HOME PAGES: UNIFIED FIRST SECTION HEIGHT (IDENTICAL ACROSS ALL 5)
+   Products, Design, About, Accessories, and Contact
+   ========================================================================== */
+.products-hero-section,
+.design-hero-section,
+.about-hero-section,
+.accessories-hero-section,
+.contact-hero-section {
+  min-height: clamp(520px, 58vh, 600px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  padding: 4.5rem 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.products-hero-section .container-custom,
+.design-hero-section .container-custom,
+.about-hero-section .container-custom,
+.accessories-hero-section .container-custom,
+.contact-hero-section .container-custom {
+  width: 100% !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* iPad Pro (11-inch & 12.9-inch in Landscape / Touch Tablets up to 1366px)
+   Strictly ONLY the Menu Button in Header */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (pointer: coarse) {
+  .nav-desktop {
+    display: none !important;
+  }
+
+  .btn-mobile-toggle {
+    display: inline-flex !important;
+  }
+
+  .header-actions .btn-header-cta,
+  .header-actions .ctrl-btn {
+    display: none !important;
+  }
+}
+
+/* Desktop & Laptop Breakpoint (Under 1024px: Switch to Mobile Drawer) */
+@media (max-width: 1024px) {
+  .nav-desktop {
+    display: none !important;
+  }
+
+  .btn-mobile-toggle {
+    display: inline-flex !important;
+  }
+
+  /* iPad Pro (1024px) & Tablet: Strictly ONLY the Menu Button in Header */
+  .header-actions .btn-header-cta,
+  .header-actions .ctrl-btn {
+    display: none !important;
+  }
+
+  /* Unified First Section Height for All Non-Home Pages on Tablet */
+  .products-hero-section,
+  .design-hero-section,
+  .about-hero-section,
+  .accessories-hero-section,
+  .contact-hero-section {
+    min-height: clamp(480px, 54vh, 560px) !important;
+    padding: 3.5rem 0 !important;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Home 1 Section Adjustments */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-media-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mosaic-luxury-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .mosaic-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .mosaic-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .process-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .collector-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet & Phablet (Under 768px) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 3.85rem;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .brand-logo-wrap {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
+  }
+
+  .header-actions .ctrl-btn {
+    display: none; /* Accessible inside mobile drawer */
+  }
+
+  /* Full Viewport Height for Home Hero on Mobile/Tablet */
+  .hero-section,
+  .hero-modern-section {
+    min-height: calc(100vh - var(--header-height)) !important;
+    min-height: calc(100dvh - var(--header-height)) !important;
+    padding: 2.25rem 0 !important;
+  }
+
+  /* Unified First Section Height for All Non-Home Pages on Mobile/Tablet */
+  .products-hero-section,
+  .design-hero-section,
+  .about-hero-section,
+  .accessories-hero-section,
+  .contact-hero-section {
+    min-height: 480px !important;
+    padding: 3rem 0 !important;
+  }
+
+  #scroll-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  [dir="rtl"] #scroll-to-top {
+    left: 1.25rem;
+    right: auto;
+  }
+
+  /* Home 1 Tablet Metrics */
+  .hero-metrics {
+    gap: 1.25rem;
+  }
+
+  .hero-tag-badge {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+    animation: none;
+  }
+
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collector-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mosaic-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .process-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .mosaic-pill-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.68rem;
+  }
+}
+
+/* Mobile Small Devices (Under 425px) */
+@media (max-width: 425px) {
+  .mosaic-quad-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .process-images-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .header-container {
+    padding: 0 0.85rem;
+  }
+
+  .brand-title {
+    font-size: 0.85rem;
+  }
+
+  .brand-logo-wrap {
+    width: 34px;
+    height: 34px;
+  }
+
+  .mobile-drawer {
+    max-width: 100%;
+  }
+
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero-btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    gap: 0.85rem;
+    box-sizing: border-box;
+  }
+
+  .hero-btn-group a {
+    width: 100%;
+    max-width: 20rem;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+  }
+
+  .hero-metrics {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .final-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0.85rem;
+    box-sizing: border-box;
+  }
+
+  .final-cta-actions a,
+  .final-cta-actions .btn {
+    width: 100%;
+    max-width: 20rem;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+  }
+
+  /* Home 2 Mobile Rules */
+  .hero-modern-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .blueprint-matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .shapes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hybrid-box {
+    padding: 2rem 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tests-grid,
+  .hud-telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ambassador-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Products Mobile Rules */
+  .products-hero-box {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .species-filter-nav {
+    justify-content: center;
+  }
+
+  .products-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sizing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Design Studio Mobile Rules */
+  .customizer-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .canvas-sticky-wrap {
+    position: relative;
+    top: 0;
+    padding: 1.5rem;
+  }
+
+  .control-swatch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .control-grid-pair {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .fonts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .symbols-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hardware-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet Overrides for Home 2, Products & Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-modern-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .shapes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hybrid-box {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .tests-grid,
+  .hud-telemetry-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hud-telemetry-card {
+    min-height: 360px;
+  }
+
+  .hud-telemetry-overlay {
+    min-height: 360px;
+    padding: 1.35rem;
+  }
+
+  .ambassador-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pack-strip-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.15rem;
+    padding: 1rem;
+  }
+
+  .pack-strip-media {
+    width: 100%;
+    height: 180px;
+  }
+
+  .pack-strip-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .products-hero-box {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .products-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .sizing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .pet-product-card,
+  .sizing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-self: stretch;
+  }
+
+  .pet-product-card > div:first-child,
+  .sizing-card > div:first-child {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .pet-product-card > div:first-child > .product-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 1.35rem 1.25rem 0.5rem;
+  }
+
+  .pet-product-card h3 {
+    font-size: 1.18rem;
+    font-weight: 800;
+    line-height: 1.3;
+    min-height: 3.2rem;
+    margin-bottom: 0.45rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .pet-product-card .product-desc {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    min-height: 4.8rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .pet-product-card .product-feature-list {
+    margin-top: auto;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    margin-bottom: 0.5rem;
+    min-height: 4.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pet-product-card > .product-card-body:last-child {
+    margin-top: auto;
+    padding: 0.5rem 1.25rem 1.35rem;
+  }
+
+  .pet-product-card > .product-card-body:last-child .btn-primary {
+    width: 100%;
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sizing-card h3 {
+    font-size: 1.18rem;
+    font-weight: 800;
+    line-height: 1.3;
+    min-height: 3.2rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sizing-card p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    min-height: 4.8rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+
+  .sizing-meta-box {
+    margin-top: auto;
+    min-height: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .customizer-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .canvas-sticky-wrap {
+    position: relative;
+    top: 0;
+    max-width: 36rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .control-panel-wrap {
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .control-grid-pair {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .fonts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .font-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-self: stretch;
+  }
+
+  .font-sample-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .font-callout-name {
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+
+  .font-callout-phone {
+    font-size: 0.75rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .font-card h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    min-height: 2.8rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .font-card p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    min-height: 4.8rem;
+  }
+
+  .font-card .shape-meta {
+    margin-top: auto;
+  }
+
+  .symbols-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .symbol-badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    align-self: stretch;
+    padding: 1.35rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .symbol-badge-item h4 {
+    min-height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .symbol-badge-item span {
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+  }
+
+  .hardware-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .hardware-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* ==========================================================================
+   ABOUT US PAGE RESPONSIVE RULES (ALL BREAKPOINTS & DEVICES)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .about-telemetry-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.25rem 1.5rem;
+  }
+  .about-telemetry-item:nth-child(2)::after {
+    display: none;
+  }
+  .about-collage-grid {
+    grid-template-columns: 1fr;
+    max-width: 38rem;
+    margin: 0 auto;
+    gap: 1.25rem;
+  }
+  .about-metal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-metal-grid > :last-child {
+    grid-column: span 2;
+  }
+  .about-atelier-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .about-pledge-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+  .about-telemetry-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .about-telemetry-item::after {
+    display: none !important;
+  }
+  .about-metal-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .about-metal-grid > :last-child {
+    grid-column: span 1 !important;
+  }
+  .about-metal-img-wrap {
+    height: 200px !important;
+  }
+  .about-atelier-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+  .about-atelier-specs-strip {
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+    padding: 1.25rem !important;
+  }
+  .atelier-spec-sep {
+    width: 60% !important;
+    height: 1px !important;
+  }
+  .about-pledge-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .about-cta-section {
+    padding: 4.5rem 0;
+  }
+  .about-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0.85rem;
+    box-sizing: border-box;
+  }
+  .about-cta-actions .btn,
+  .about-cta-actions a {
+    width: 100%;
+    max-width: 20rem;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+  }
+  .about-cta-badges {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-telemetry-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem !important;
+  }
+  .about-spec-matrix {
+    padding: 0.5rem;
+    gap: 0.35rem;
+  }
+  .about-spec-col-key {
+    font-size: 0.62rem;
+  }
+  .about-spec-col-val {
+    font-size: 0.75rem;
+  }
+  .about-floating-telemetry {
+    left: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.65rem 0.9rem;
+  }
+}
+
+/* ==========================================================================
+   ACCESSORIES PAGE RESPONSIVE RULES (ALL BREAKPOINTS & DEVICES)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .accessories-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .accessories-hero-img {
+    height: 360px;
+  }
+  .accessories-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .accessories-silencer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .accessories-collar-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .accessories-hero-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+  .accessories-hero-img {
+    height: 280px;
+  }
+  .accessories-chip-row {
+    gap: 0.4rem;
+  }
+  .accessories-stat-pills {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .accessories-quad-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .accessories-silencer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .accessories-silencer-grid > :last-child {
+    grid-column: span 1;
+  }
+  .btn-acc-action {
+    width: 100%;
+    max-width: 240px;
+    margin: 0.75rem auto 0;
+  }
+  .collar-img-wrap {
+    height: 200px;
+  }
+  .collar-body {
+    padding: 1.35rem;
+  }
+  .accessories-cta-section {
+    padding: 4.5rem 0;
+  }
+  .accessories-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0.85rem;
+    box-sizing: border-box;
+  }
+  .accessories-cta-actions .btn,
+  .accessories-cta-actions a {
+    width: 100%;
+    max-width: 20rem;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+  }
+  .accessories-cta-badges {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .accessories-hero-img {
+    height: 240px;
+  }
+  .acc-spec-badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .silencer-spec-table {
+    padding: 0.5rem;
+    gap: 0.25rem;
+  }
+  .silencer-spec-lbl {
+    font-size: 0.62rem;
+  }
+  .silencer-spec-val {
+    font-size: 0.75rem;
+  }
+}
+
+/* ==========================================================================
+   CONTACT US PAGE RESPONSIVE RULES (ALL BREAKPOINTS & DEVICES)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .contact-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .contact-hero-img {
+    height: 380px;
+  }
+  .contact-support-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .contact-map-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-section {
+    padding: 3.5rem 0 2.5rem;
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+  .contact-hero-content {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-hero-title {
+    font-size: clamp(1.65rem, 5vw, 2.25rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    word-break: break-word;
+    margin-bottom: 0.85rem;
+  }
+  .contact-hero-desc {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #cbd5e1;
+    margin-bottom: 1.75rem;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .contact-channels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    width: 100%;
+    max-width: 32rem;
+  }
+  .contact-channel-item {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    column-gap: 0.85rem;
+    row-gap: 0.35rem;
+    padding: 0.95rem 1rem;
+    align-items: start;
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 32rem;
+  }
+  .contact-channel-icon {
+    grid-row: 1 / span 2;
+    align-self: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 0.75rem;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+  .contact-channel-info {
+    grid-column: 2;
+    min-width: 0;
+    width: 100%;
+  }
+  .contact-channel-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+    display: block;
+  }
+  .contact-channel-val {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.35;
+    display: block;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  .contact-channel-badge {
+    grid-column: 2;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    margin-top: 0.25rem;
+  }
+  .contact-hero-img {
+    height: 280px;
+  }
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+  .contact-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .contact-map-frame-wrap,
+  .contact-map-frame-wrap iframe {
+    min-height: 340px;
+  }
+  .contact-map-info-card {
+    padding: 1.25rem 1rem !important;
+    border-radius: 1.25rem !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .map-info-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+  .map-info-icon {
+    width: 2.4rem !important;
+    height: 2.4rem !important;
+    border-radius: 0.75rem !important;
+    font-size: 1.05rem !important;
+    flex-shrink: 0 !important;
+  }
+  .map-info-body {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .map-info-lbl {
+    font-size: 0.68rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.06em !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .map-info-title {
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.35rem !important;
+  }
+  .map-info-val {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+    color: var(--text-muted) !important;
+    word-break: break-word !important;
+  }
+  .map-hours-list {
+    margin-top: 0.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.45rem !important;
+    width: 100% !important;
+  }
+  .map-hours-list li {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.35rem 0 !important;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .map-hours-list li:last-child {
+    border-bottom: none !important;
+  }
+  .map-hours-list li span {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    color: var(--text-muted) !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+  .map-hours-list li strong {
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+    white-space: nowrap !important;
+    text-align: right !important;
+  }
+  .map-hours-list li em {
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    color: #f59e0b !important;
+    font-style: normal !important;
+    text-align: right !important;
+    line-height: 1.25 !important;
+  }
+  .map-pet-friendly-badge {
+    padding: 0.75rem 0.85rem !important;
+    gap: 0.65rem !important;
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+    border-radius: 0.85rem !important;
+  }
+  .btn-map-nav {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.92rem !important;
+  }
+  .contact-cta-section {
+    padding: 4.5rem 0;
+  }
+  .contact-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0.85rem;
+    box-sizing: border-box;
+  }
+  .contact-cta-actions .btn,
+  .contact-cta-actions a {
+    width: 100%;
+    max-width: 20rem;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+  }
+  .contact-cta-badges {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-subject-pills {
+    gap: 0.35rem;
+  }
+  .subject-pill-btn {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.65rem;
+  }
+  .contact-channel-item {
+    padding: 0.85rem 0.75rem;
+    column-gap: 0.75rem;
+  }
+  .contact-channel-val {
+    font-size: 0.88rem;
+  }
+  .contact-map-info-card {
+    padding: 1.15rem 0.9rem !important;
+  }
+  .map-hours-list li span,
+  .map-hours-list li strong {
+    font-size: 0.8rem !important;
+  }
+  .map-hours-list li em {
+    font-size: 0.74rem !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE "ONE BY ONE" GRID & PRODUCTS HERO RESPONSIVE ENGINE
+   Strictly applies single-column ("one by one") layout on 360, 375, 393, 440px (up to 640px)
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  /* -------------------------------------------------------------------------
+     1. PRODUCTS HERO & SPECIES FILTER CARD
+     ------------------------------------------------------------------------- */
+  .products-hero-section {
+    padding: 3.5rem 0 3.5rem;
+  }
+
+  .products-hero-center-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .products-hero-center-wrap .hero-pill {
+    font-size: 0.8rem;
+    padding: 0.45rem 1rem;
+    margin-bottom: 1.15rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
+    gap: 0.45rem;
+    max-width: 100%;
+    border-radius: 9999px;
+  }
+
+  .products-hero-center-wrap .hero-title {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin-bottom: 0.85rem;
+    letter-spacing: -0.02em;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+
+  .products-hero-center-wrap .hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+    color: #cbd5e1;
+    max-width: 32rem;
+    padding: 0 0.75rem;
+  }
+
+  /* Segmented Filter Card on Mobile (No Distorted Oval) */
+  .species-filter-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    padding: 0.5rem !important;
+    gap: 0.45rem !important;
+    border-radius: 1.25rem !important;
+    background: rgba(15, 23, 42, 0.94) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55) !important;
+    box-sizing: border-box !important;
+  }
+
+  .species-filter-nav .filter-btn {
+    width: 100% !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 1.15rem !important;
+    border-radius: 0.85rem !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    text-decoration: none !important;
+  }
+
+  .species-filter-nav .filter-btn.active {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #ea580c 100%) !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35) !important;
+  }
+
+  .species-filter-nav .filter-btn:not(.active) {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #e2e8f0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .species-filter-nav .filter-btn:not(.active):hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+  }
+
+  .species-filter-nav .filter-count {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    padding: 0.25rem 0.65rem !important;
+    border-radius: 9999px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .species-filter-nav .filter-btn.active .filter-count {
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: #ffffff !important;
+  }
+
+  .species-filter-nav .filter-btn:not(.active) .filter-count {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #cbd5e1 !important;
+  }
+
+  /* -------------------------------------------------------------------------
+     2. STRICT "ONE BY ONE" GRID ENFORCEMENT ON MOBILE (360, 375, 393, 440)
+     ------------------------------------------------------------------------- */
+
+  /* Products Cards: Canine & Feline Collections -> ONE BY ONE */
+  .products-card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .pet-product-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .pet-product-card > div:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+
+  .product-img-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 230px !important;
+    aspect-ratio: auto !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  .product-img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .material-card > div:first-child,
+  .blueprint-card > div:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+
+  .material-img-wrap,
+  .blueprint-img-wrap,
+  .test-img-wrap,
+  .ambassador-img-wrap,
+  .font-img-wrap,
+  .collar-img-wrap,
+  .support-card-img-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    aspect-ratio: auto !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  .material-img-wrap img,
+  .blueprint-img-wrap img,
+  .test-img-wrap img,
+  .ambassador-img-wrap img,
+  .font-img-wrap img,
+  .collar-img-wrap img,
+  .support-card-img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .product-card-body {
+    padding: 1.35rem 1.25rem !important;
+  }
+
+  .product-cta-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Laser Typography Font Specimens -> ONE BY ONE */
+  .fonts-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .font-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .font-sample-callout {
+    padding: 0.65rem 1rem !important;
+  }
+
+  /* Personalized Emblems & Symbols -> ONE BY ONE */
+  .symbols-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .symbol-badge-item {
+    width: 100% !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 1.15rem !important;
+    padding: 1rem 1.25rem !important;
+    border-radius: 1rem !important;
+  }
+
+  [dir="rtl"] .symbol-badge-item {
+    text-align: right !important;
+  }
+
+  .symbol-icon-circle {
+    width: 50px !important;
+    height: 50px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Tag Shapes -> ONE BY ONE */
+  .shapes-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Sizing Cards -> ONE BY ONE */
+  .sizing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Accessories Hardware & Silencer Cards -> ONE BY ONE */
+  .accessories-quad-grid,
+  .accessories-silencer-grid,
+  .accessories-collar-grid,
+  .hardware-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .btn-acc-action {
+    width: 100% !important;
+    max-width: 240px !important;
+    margin: 0.75rem auto 0 !important;
+  }
+
+  /* About Us Metallurgy Bench Cards -> ONE BY ONE (360, 375, 412, 427, 440) */
+  .about-metal-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .about-metal-grid > :last-child {
+    grid-column: span 1 !important;
+  }
+
+  .about-metal-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .about-metal-img-wrap {
+    height: 220px !important;
+    width: 100% !important;
+  }
+
+  .about-metal-body {
+    padding: 1.35rem 1.25rem 1.25rem !important;
+  }
+
+  .about-metal-name {
+    font-size: 1.35rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .about-metal-brief {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    min-height: auto !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .about-spec-matrix {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    padding: 0.75rem 0.5rem !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .about-spec-col-key {
+    font-size: 0.65rem !important;
+  }
+
+  .about-spec-col-val {
+    font-size: 0.82rem !important;
+  }
+
+  .about-metal-foot {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-top: 0.85rem !important;
+  }
+
+  /* Laser Tech Feature Cards -> ONE BY ONE (360, 375, 412, 427, 440) */
+  .about-atelier-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  .about-minimal-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.75rem 1.35rem !important;
+    border-radius: 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-minimal-title {
+    font-size: 1.25rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .about-minimal-text {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .about-atelier-specs-strip {
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+    padding: 1.25rem 1rem !important;
+  }
+
+  .atelier-spec-sep {
+    width: 60% !important;
+    height: 1px !important;
+    margin: 0 auto !important;
+  }
+
+  /* 4-Pillar Sanctuary & Eco Pledge Cards -> ONE BY ONE (360, 375, 412, 427, 440) */
+  .about-pledge-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .about-pledge-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 1.25rem !important;
+  }
+
+  .about-pledge-img-wrap {
+    height: 210px !important;
+    width: 100% !important;
+  }
+
+  .about-pledge-body {
+    padding: 1.35rem 1.25rem 1.25rem !important;
+  }
+
+  .about-pledge-title {
+    font-size: 1.25rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .about-pledge-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.15rem !important;
+    min-height: auto !important;
+  }
+
+  .about-pledge-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.45rem !important;
+    font-size: 0.78rem !important;
+    padding: 0.4rem 0.85rem !important;
+  }
+
+  /* Tri-Photo Gallery -> ONE BY ONE */
+  .about-collage-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    max-width: 100% !important;
+  }
+
+  .about-collage-card {
+    width: 100% !important;
+    height: 250px !important;
+  }
+
+  /* -------------------------------------------------------------------------
+     3. ABOUT US HERO & TELEMETRY STRIP (ALL MOBILE: 360, 375, 412, 427, 440)
+     ------------------------------------------------------------------------- */
+  .about-hero-section {
+    padding: 3.25rem 0 2.5rem !important;
+    min-height: auto !important;
+    overflow: hidden !important;
+  }
+
+  .about-hero-header {
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+  }
+
+  .about-eyebrow {
+    font-size: 0.72rem !important;
+    padding: 0.4rem 0.9rem !important;
+    letter-spacing: 0.06em !important;
+    margin-bottom: 1rem !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-hero-title {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.85rem !important;
+    letter-spacing: -0.02em !important;
+    text-align: center !important;
+    padding: 0 0.5rem !important;
+    word-break: break-word !important;
+  }
+
+  .about-hero-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin: 0 auto 2rem !important;
+    color: #cbd5e1 !important;
+    padding: 0 0.75rem !important;
+    max-width: 34rem !important;
+    text-align: center !important;
+  }
+
+  /* Symmetrical 2x2 Clean Balanced Luxury Grid on All Mobile Viewports */
+  .about-telemetry-strip {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem 0.75rem !important;
+    padding: 1rem 0.85rem !important;
+    border-radius: 1.25rem !important;
+    background: rgba(15, 23, 42, 0.88) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5) !important;
+    max-width: 440px !important;
+    margin: 0 auto 2.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-telemetry-item {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 0.85rem !important;
+    padding: 0.85rem 0.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 78px !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-telemetry-item::after {
+    display: none !important;
+  }
+
+  .about-telemetry-val {
+    font-family: var(--font-heading) !important;
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    color: #f59e0b !important;
+    line-height: 1.15 !important;
+    margin-bottom: 0.3rem !important;
+    letter-spacing: -0.02em !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+
+  .about-telemetry-lbl {
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    color: #f1f5f9 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+}
+
+/* 440px / 427px / 425px Viewports (iPhone 14/15/16 Pro Max, Pixel Pro) */
+@media (max-width: 440px) {
+  .products-hero-section {
+    padding: 3.25rem 0 3.25rem;
+  }
+
+  .products-hero-center-wrap .hero-title {
+    font-size: 1.95rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    padding: 0 0.35rem;
+  }
+
+  .products-hero-center-wrap .hero-desc {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .species-filter-nav {
+    max-width: 350px !important;
+    padding: 0.45rem !important;
+    border-radius: 1.15rem !important;
+  }
+
+  .species-filter-nav .filter-btn {
+    height: 46px !important;
+    padding: 0 1rem !important;
+    font-size: 0.86rem !important;
+    border-radius: 0.8rem !important;
+  }
+
+  .product-img-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 220px !important;
+    aspect-ratio: auto !important;
+  }
+
+  /* About Page Mobile 440px / 427px / 412px */
+  .about-hero-title {
+    font-size: 1.85rem !important;
+    line-height: 1.22 !important;
+    padding: 0 0.35rem !important;
+  }
+
+  .about-hero-subtitle {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .about-telemetry-strip {
+    max-width: 100% !important;
+    padding: 0.9rem 0.75rem !important;
+    gap: 0.75rem 0.65rem !important;
+  }
+
+  .about-telemetry-item {
+    padding: 0.8rem 0.45rem !important;
+    min-height: 74px !important;
+  }
+
+  .about-telemetry-val {
+    font-size: 1.45rem !important;
+  }
+
+  .about-telemetry-lbl {
+    font-size: 0.68rem !important;
+  }
+
+  /* About Cards fine-tuning for 440px / 427px */
+  .about-metal-img-wrap,
+  .about-pledge-img-wrap {
+    height: 200px !important;
+  }
+
+  .about-metal-name,
+  .about-minimal-title,
+  .about-pledge-title {
+    font-size: 1.22rem !important;
+  }
+
+  .about-metal-brief,
+  .about-minimal-text,
+  .about-pledge-desc {
+    font-size: 0.88rem !important;
+  }
+
+  .about-metal-body,
+  .about-minimal-card,
+  .about-pledge-body {
+    padding: 1.25rem 1.15rem !important;
+  }
+}
+
+/* 393px / 375px Viewports (iPhone 14/15/16 Standard, iPhone SE, iPhone 12/13 mini) */
+@media (max-width: 393px) {
+  .products-hero-section {
+    padding: 2.85rem 0 3rem;
+  }
+
+  .products-hero-center-wrap .hero-pill {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.85rem;
+    margin-bottom: 0.95rem;
+  }
+
+  .products-hero-center-wrap .hero-title {
+    font-size: 1.75rem;
+    line-height: 1.22;
+    margin-bottom: 0.7rem;
+    letter-spacing: -0.015em;
+    padding: 0 0.2rem;
+  }
+
+  .products-hero-center-wrap .hero-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 1.35rem;
+    padding: 0 0.35rem;
+  }
+
+  .species-filter-nav {
+    max-width: 330px !important;
+    padding: 0.4rem !important;
+    gap: 0.35rem !important;
+    border-radius: 1.1rem !important;
+  }
+
+  .species-filter-nav .filter-btn {
+    height: 44px !important;
+    padding: 0 0.9rem !important;
+    font-size: 0.84rem !important;
+    border-radius: 0.75rem !important;
+  }
+
+  .species-filter-nav .filter-count {
+    font-size: 0.68rem !important;
+    padding: 0.18rem 0.55rem !important;
+  }
+
+  .product-img-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 210px !important;
+    aspect-ratio: auto !important;
+  }
+
+  /* About Page Mobile 393px / 375px */
+  .about-hero-section {
+    padding: 2.75rem 0 2rem !important;
+  }
+
+  .about-eyebrow {
+    font-size: 0.68rem !important;
+    padding: 0.35rem 0.75rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .about-hero-title {
+    font-size: 1.7rem !important;
+    line-height: 1.22 !important;
+    padding: 0 0.2rem !important;
+  }
+
+  .about-hero-subtitle {
+    font-size: 0.86rem !important;
+    line-height: 1.5 !important;
+    padding: 0 0.35rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  .about-telemetry-strip {
+    padding: 0.75rem 0.65rem !important;
+    gap: 0.65rem 0.55rem !important;
+    border-radius: 1.15rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .about-telemetry-item {
+    padding: 0.75rem 0.35rem !important;
+    min-height: 70px !important;
+    border-radius: 0.75rem !important;
+  }
+
+  .about-telemetry-val {
+    font-size: 1.35rem !important;
+  }
+
+  .about-telemetry-lbl {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  /* About Cards fine-tuning for 393px / 375px */
+  .about-metal-img-wrap,
+  .about-pledge-img-wrap {
+    height: 185px !important;
+  }
+
+  .about-metal-name,
+  .about-minimal-title,
+  .about-pledge-title {
+    font-size: 1.16rem !important;
+  }
+
+  .about-metal-brief,
+  .about-minimal-text,
+  .about-pledge-desc {
+    font-size: 0.85rem !important;
+  }
+
+  .about-metal-body,
+  .about-minimal-card,
+  .about-pledge-body {
+    padding: 1.15rem 1rem !important;
+  }
+
+  .about-spec-matrix {
+    padding: 0.6rem 0.35rem !important;
+    gap: 0.35rem !important;
+  }
+
+  .about-spec-col-key {
+    font-size: 0.62rem !important;
+  }
+
+  .about-spec-col-val {
+    font-size: 0.78rem !important;
+  }
+}
+
+/* 360px Viewports (Samsung Galaxy S / Android compact baseline) */
+@media (max-width: 360px) {
+  .products-hero-section {
+    padding: 2.5rem 0 2.75rem;
+  }
+
+  .products-hero-center-wrap .hero-pill {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .products-hero-center-wrap .hero-title {
+    font-size: 1.62rem;
+    line-height: 1.22;
+    margin-bottom: 0.65rem;
+    padding: 0;
+  }
+
+  .products-hero-center-wrap .hero-desc {
+    font-size: 0.84rem;
+    line-height: 1.48;
+    margin-bottom: 1.25rem;
+    padding: 0 0.15rem;
+  }
+
+  .species-filter-nav {
+    max-width: 100% !important;
+    padding: 0.35rem !important;
+    gap: 0.35rem !important;
+    border-radius: 1rem !important;
+  }
+
+  .species-filter-nav .filter-btn {
+    height: 42px !important;
+    padding: 0 0.8rem !important;
+    font-size: 0.8rem !important;
+    border-radius: 0.65rem !important;
+  }
+
+  .species-filter-nav .filter-count {
+    font-size: 0.65rem !important;
+    padding: 0.15rem 0.45rem !important;
+  }
+
+  .product-img-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 195px !important;
+    aspect-ratio: auto !important;
+  }
+
+  /* About Page Mobile 360px */
+  .about-hero-section {
+    padding: 2.5rem 0 1.75rem !important;
+  }
+
+  .about-eyebrow {
+    font-size: 0.64rem !important;
+    padding: 0.3rem 0.65rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .about-hero-title {
+    font-size: 1.55rem !important;
+    line-height: 1.24 !important;
+    padding: 0 !important;
+  }
+
+  .about-hero-subtitle {
+    font-size: 0.82rem !important;
+    line-height: 1.48 !important;
+    padding: 0 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .about-telemetry-strip {
+    padding: 0.65rem 0.5rem !important;
+    gap: 0.5rem 0.45rem !important;
+    border-radius: 1rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  .about-telemetry-item {
+    padding: 0.65rem 0.25rem !important;
+    min-height: 66px !important;
+    border-radius: 0.65rem !important;
+  }
+
+  .about-telemetry-val {
+    font-size: 1.22rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .about-telemetry-lbl {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.25 !important;
+  }
+
+  /* About Cards fine-tuning for 360px */
+  .about-metal-img-wrap,
+  .about-pledge-img-wrap {
+    height: 175px !important;
+  }
+
+  .about-metal-name,
+  .about-minimal-title,
+  .about-pledge-title {
+    font-size: 1.1rem !important;
+  }
+
+  .about-metal-brief,
+  .about-minimal-text,
+  .about-pledge-desc {
+    font-size: 0.82rem !important;
+  }
+
+  .about-metal-body,
+  .about-minimal-card,
+  .about-pledge-body {
+    padding: 1rem 0.85rem !important;
+  }
+
+  .about-spec-matrix {
+    padding: 0.5rem 0.25rem !important;
+    gap: 0.25rem !important;
+  }
+
+  .about-spec-col-key {
+    font-size: 0.58rem !important;
+  }
+
+  .about-spec-col-val {
+    font-size: 0.72rem !important;
+  }
+
+  .about-foot-cert span {
+    font-size: 0.72rem !important;
+  }
+
+  .about-foot-link span {
+    font-size: 0.72rem !important;
+  }
+}
+
+/* ==========================================================================
+   TABLET & MID-DESKTOP FOOTER 2x2 REFERENCE GRID ENGINE (768px, 960px, 1032px)
+   Matches Reference: 2 columns x 2 rows, clean accent line, 5 social icons,
+   and horizontal footer bottom bar.
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1032px) {
+  .site-footer {
+    padding: 4.5rem 0 2rem !important;
+  }
+
+  .footer-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 2rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-top-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 3rem 3.5rem !important;
+    margin-bottom: 3.5rem !important;
+    align-items: start !important;
+  }
+
+  /* Col 1 Row 1: Brand */
+  .footer-brand-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .footer-brand {
+    margin-bottom: 1rem !important;
+    padding-bottom: 0.5rem !important;
+    position: relative !important;
+    min-height: 44px !important;
+  }
+
+  .footer-bio {
+    max-width: 26rem !important;
+    line-height: 1.6 !important;
+    font-size: 0.9rem !important;
+    color: #cbd5e1 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .footer-status-pill {
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Social Icons Row */
+  .footer-social-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+  }
+
+  .footer-social-title {
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: #94a3b8 !important;
+    display: block !important;
+  }
+
+  .footer-socials {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .footer-social-link {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 0.5rem !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #cbd5e1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .footer-social-link:hover {
+    background-color: var(--color-primary, #f59e0b) !important;
+    border-color: var(--color-primary, #f59e0b) !important;
+    color: #000000 !important;
+    transform: translateY(-2px) !important;
+  }
+
+  /* Column Titles with Accent Bar underneath matching reference image */
+  .footer-col-title {
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    margin-bottom: 1.25rem !important;
+    position: relative !important;
+    padding-bottom: 0.65rem !important;
+    min-height: auto !important;
+    display: block !important;
+  }
+
+  .footer-col-title::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 32px !important;
+    height: 3px !important;
+    background-color: var(--color-primary, #f59e0b) !important;
+    border-radius: 9999px !important;
+  }
+
+  [dir="rtl"] .footer-col-title::after {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  .footer-links-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.85rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .footer-link-item a {
+    font-size: 0.92rem !important;
+    color: #cbd5e1 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .footer-link-item a:hover {
+    color: var(--color-primary, #f59e0b) !important;
+    transform: translateX(4px) !important;
+  }
+
+  [dir="rtl"] .footer-link-item a:hover {
+    transform: translateX(-4px) !important;
+  }
+
+  .footer-newsletter-text {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    color: #cbd5e1 !important;
+    max-width: 26rem !important;
+    margin-bottom: 1.15rem !important;
+  }
+
+  .footer-newsletter-form {
+    max-width: 26rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+  }
+
+  .footer-input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 0.5rem !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    font-size: 0.9rem !important;
+  }
+
+  .footer-newsletter-btn {
+    width: fit-content !important;
+    padding: 0.75rem 1.5rem !important;
+    background: var(--color-primary, #f59e0b) !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    border-radius: 0.5rem !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+
+  /* Horizontal Bottom Bar with Safe Clearance & Dynamic Wrapping */
+  .footer-bottom-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 1.25rem 2rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding-top: 1.75rem !important;
+    padding-bottom: 2rem !important;
+    padding-right: 4.5rem !important; /* Safe clearance prevents scroll-to-top button overlap */
+    box-sizing: border-box !important;
+  }
+
+  [dir="rtl"] .footer-bottom-bar {
+    padding-right: 0 !important;
+    padding-left: 4.5rem !important;
+  }
+
+  .footer-bottom-bar p {
+    font-size: 0.82rem !important;
+    color: #94a3b8 !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+  }
+
+  .footer-bottom-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 1.25rem 1.75rem !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .footer-bottom-links li {
+    white-space: nowrap !important;
+  }
+
+  .footer-bottom-links a {
+    font-size: 0.82rem !important;
+    color: #94a3b8 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+  }
+
+  .footer-bottom-links a:hover {
+    color: var(--color-primary, #f59e0b) !important;
+  }
+}
+
+/* Mobile Footer: 1 Column on Small Phones (< 768px) */
+@media (max-width: 767px) {
+  .footer-top-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+  }
+
+  .footer-bottom-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+    padding-bottom: 3.5rem !important;
+    padding-right: 3.5rem !important;
+  }
+
+  [dir="rtl"] .footer-bottom-bar {
+    padding-right: 0 !important;
+    padding-left: 3.5rem !important;
+  }
+
+  .footer-bottom-links {
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Shop indestructible pet tag attachment hardware, braided aviation wire rings, mini carabiners, silent silicone bumpers, and waterproof BioThane collars.">
+  <meta name="keywords"
+    content="pet tag hardware, dog tag silencer, split rings, pet carabiner clip, biothane waterproof collar">
+  <title>Engineered Attachment Hardware &amp; Silencers | Custom Pet ID Tag &amp; Accessory Engraving Shop</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Global Design System & Responsive Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Accessories Page Strictly Even Card & Button Alignment Engine (768px, 1024px & All Mobile) -->
+  <style>
+    /* Add To Tag Rig Button - Constrained, Centered, Proportional (Never Stretched) */
+    .btn-acc-action {
+      width: 100% !important;
+      max-width: 240px !important;
+      margin: 0.75rem auto 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.5rem !important;
+      padding: 0.7rem 1.25rem !important;
+      font-size: 0.88rem !important;
+      font-weight: 700 !important;
+      border-radius: 0.75rem !important;
+      box-sizing: border-box !important;
+      background: var(--bg-body) !important;
+      border: 1px solid var(--border-color) !important;
+      color: var(--text-main) !important;
+      transition: all 0.25s ease !important;
+      cursor: pointer !important;
+    }
+
+    .btn-acc-action:hover {
+      background: var(--color-primary) !important;
+      border-color: var(--color-primary) !important;
+      color: #ffffff !important;
+    }
+
+    /* Tablet (641px - 1024px including 768px) Balanced 2-Column Grid */
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .accessories-quad-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1.5rem !important;
+        align-items: stretch !important;
+      }
+
+      .accessories-silencer-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1.5rem !important;
+        align-items: stretch !important;
+      }
+
+      .accessories-collar-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+    }
+
+    /* Accessory Cards Strictly Even Height & Baseline Alignment */
+    .accessory-card {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      height: 100% !important;
+      align-self: stretch !important;
+      border-radius: 1.25rem !important;
+      background-color: var(--bg-surface) !important;
+      box-shadow: var(--shadow-sm) !important;
+    }
+
+    .accessory-card-body {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      flex: 1 1 auto !important;
+      padding: 1.5rem !important;
+    }
+
+    .acc-card-title {
+      font-size: 1.2rem !important;
+      font-weight: 800 !important;
+      line-height: 1.3 !important;
+      min-height: 2.8rem !important;
+      margin-bottom: 0.4rem !important;
+      display: flex !important;
+      align-items: flex-start !important;
+    }
+
+    .acc-card-desc {
+      font-size: 0.86rem !important;
+      line-height: 1.55 !important;
+      min-height: 4.5rem !important;
+      margin-bottom: 1.25rem !important;
+      color: var(--text-muted) !important;
+    }
+
+    .accessory-card-body>div:last-child {
+      margin-top: auto !important;
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    .acc-meta-strip {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      margin-bottom: 0.65rem !important;
+    }
+
+    /* Silencer Cards Strictly Even Height */
+    .silencer-card {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      height: 100% !important;
+      align-self: stretch !important;
+      border-radius: 1.25rem !important;
+    }
+
+    .silencer-body {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      flex: 1 1 auto !important;
+      padding: 1.5rem !important;
+    }
+
+    .silencer-title {
+      font-size: 1.25rem !important;
+      font-weight: 800 !important;
+      line-height: 1.3 !important;
+      min-height: 3.2rem !important;
+      margin-bottom: 0.45rem !important;
+      display: flex !important;
+      align-items: flex-start !important;
+    }
+
+    .silencer-desc {
+      font-size: 0.86rem !important;
+      line-height: 1.55 !important;
+      min-height: 4.5rem !important;
+      margin-bottom: 1.25rem !important;
+      color: var(--text-muted) !important;
+    }
+
+    .silencer-spec-table {
+      margin-top: auto !important;
+      margin-bottom: 1.25rem !important;
+    }
+
+    .silencer-foot {
+      margin-top: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding-top: 1rem !important;
+      border-top: 1px solid var(--border-color) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       BRANDED PRELOADER
+       ====================================================================== -->
+  <div id="page-preloader" role="status" aria-live="polite" aria-label="Loading Custom Pet ID Tag Shop">
+    <div class="loader-badge">
+      <div class="loader-spinner"></div>
+      <img src="assets/images/icons/logo.png" alt="Custom Pet ID Tag Shop Logo">
+    </div>
+    <p class="loader-text">Custom Pet Engraving</p>
+  </div>
+
+  <!-- ======================================================================
+       FIXED COMPACT SINGLE-LINE HEADER
+       ====================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+
+      <!-- Brand Identity -->
+      <a href="index.html" class="brand-link" aria-label="Custom Pet ID Tag & Accessory Engraving Shop Home">
+        <div class="brand-logo-wrap">
+          <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-meta">
+          <span class="brand-title">PetTags<span>&amp;Co.</span></span>
+          <span class="brand-subtitle">Modern Tag Lab</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Nav Items -->
+      <nav class="nav-desktop-wrapper" aria-label="Main Navigation">
+        <ul class="nav-desktop">
+
+          <!-- 1. Home with Click-Only Dropdown -->
+          <li class="nav-dropdown-wrapper js-nav-dropdown">
+            <button type="button" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="dropdown-arrow rtl-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-panel" role="menu">
+              <li role="none">
+                <a href="index.html" role="menuitem">
+                  <span>Home 1 (Artisan Studio)</span>
+                  <span class="tag-pill">Classic</span>
+                </a>
+              </li>
+              <li role="none">
+                <a href="home-2.html" role="menuitem">
+                  <span>Home 2 (Modern Tag Lab)</span>
+                  <span class="tag-pill">Modern</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 2. Products (By Pet Type) -->
+          <li>
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+
+          <!-- 3. Design Your Tag -->
+          <li>
+            <a href="design.html" class="nav-link">Design Your Tag</a>
+          </li>
+
+          <!-- 4. About (Mandatory) -->
+          <li>
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <!-- 5. Accessories -->
+          <li>
+            <a href="accessories.html" class="nav-link">Accessories</a>
+          </li>
+
+          <!-- 6. Contact (Directly Visible) -->
+          <li>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Desktop Controls: RTL, Dark Mode, Action CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Button -->
+        <button type="button" class="ctrl-btn js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)"
+          title="Switch RTL/LTR">
+          <svg class="rtl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="rtl-text font-bold text-xs rtl-badge-text">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle Button (#000000 Strict) -->
+        <button type="button" class="ctrl-btn js-dark-toggle" aria-label="Toggle Dark Mode" title="Switch Theme">
+          <!-- Moon Icon for Light Mode -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon for Dark Mode -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- CTA Action Button -->
+        <a href="design.html" class="btn-header-cta" id="header-cta-btn">
+          <span>Design Tag</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" class="rtl-flip">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Drawer Toggle Button -->
+        <button type="button" class="btn-mobile-toggle js-mobile-toggle" aria-label="Open Mobile Menu"
+          aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MOBILE DRAWER NAVIGATION
+       ====================================================================== -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop" tabindex="-1"></div>
+
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <!-- Drawer Header -->
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="drawer-brand-logo">
+        <div>
+          <div class="drawer-brand-name">PetTags&amp;Co.</div>
+          <div class="drawer-brand-sub">Modern Tag Lab</div>
+        </div>
+      </div>
+      <button type="button" class="btn-drawer-close js-drawer-close" aria-label="Close Mobile Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Navigation Links -->
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+
+        <!-- Home Accordion (CLICK ONLY) -->
+        <li class="drawer-accordion js-drawer-accordion">
+          <button type="button" class="drawer-accordion-btn" aria-expanded="false">
+            <span>Home</span>
+            <svg class="drawer-accordion-arrow rtl-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="drawer-accordion-content">
+            <li>
+              <a href="index.html" class="drawer-sublink">
+                <span>Home 1 (Artisan Studio)</span>
+              </a>
+            </li>
+            <li>
+              <a href="home-2.html" class="drawer-sublink">
+                <span>Home 2 (Modern Tag Lab)</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="products.html" class="drawer-nav-link">Products</a></li>
+        <li><a href="design.html" class="drawer-nav-link">Design Your Tag</a></li>
+        <li><a href="about.html" class="drawer-nav-link">About Us</a></li>
+        <li><a href="accessories.html" class="drawer-nav-link">Accessories</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact</a></li>
+
+      </ul>
+    </div>
+
+    <!-- Drawer Footer with Dark Mode and RTL Controls -->
+    <div class="drawer-footer">
+      <div class="drawer-ctrls">
+        <button type="button" class="drawer-ctrl-item js-dark-toggle" aria-label="Toggle Dark Mode">
+          <svg class="icon-moon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span>Dark Mode</span>
+        </button>
+
+        <button type="button" class="drawer-ctrl-item js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" style="width:16px;height:16px;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="rtl-text font-bold">RTL</span>
+          <span>Switch</span>
+        </button>
+      </div>
+
+      <a href="design.html" class="btn-header-cta drawer-cta-full">
+        <span>Start Customizing</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" class="rtl-flip">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         SECTION 1: THE GEAR VAULT & INTERACTIVE HARDWARE SELECTOR
+         Split Horizon Layout with Category Filter Chips and Live Pull-Force Telemetry
+         ====================================================================== -->
+    <section class="accessories-hero-section" id="hardware-vault" aria-labelledby="acc-hero-heading">
+      <!-- Background Image Layer -->
+      <div class="accessories-hero-bg">
+        <img src="assets/images/accessories/p40.jpg"
+          alt="Active companion dog in ocean surf wearing durable pet tag hardware" loading="eager" width="1920"
+          height="1080">
+      </div>
+      <div class="accessories-hero-overlay"></div>
+
+      <div class="container-custom">
+        <div class="accessories-hero-grid">
+          <!-- Left: Hero Headline & Filter Controls -->
+          <div class="accessories-hero-content">
+            <div class="accessories-eyebrow">
+              <i class="fa-solid fa-shield-virus" aria-hidden="true"></i>
+              <span>Zero-Failure Attachment Gear</span>
+            </div>
+            <h1 class="accessories-hero-title" id="acc-hero-heading">
+              Hardened Attachment Hardware &amp; Collar Silencers
+            </h1>
+            <p class="accessories-hero-desc">
+              A lost tag is a failed lifeline. We manufacture heavy-gauge 316 marine stainless rings, spring carabiners,
+              and shock-absorbing silicone bumpers tested for extreme wilderness pulls.
+            </p>
+
+            <!-- Category Filter Chips -->
+            <div class="accessories-chip-row" role="tablist" aria-label="Accessory Categories">
+              <button type="button" class="accessory-chip active" role="tab" aria-selected="true">
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                <span>All Rigging</span>
+              </button>
+              <button type="button" class="accessory-chip" role="tab" aria-selected="false">
+                <i class="fa-solid fa-circle-notch" aria-hidden="true"></i>
+                <span>Split Rings</span>
+              </button>
+              <button type="button" class="accessory-chip" role="tab" aria-selected="false">
+                <i class="fa-solid fa-link" aria-hidden="true"></i>
+                <span>Quick Carabiners</span>
+              </button>
+              <button type="button" class="accessory-chip" role="tab" aria-selected="false">
+                <i class="fa-solid fa-bell-slash" aria-hidden="true"></i>
+                <span>Silent Bumpers</span>
+              </button>
+              <button type="button" class="accessory-chip" role="tab" aria-selected="false">
+                <i class="fa-solid fa-ring" aria-hidden="true"></i>
+                <span>Adventure Collars</span>
+              </button>
+            </div>
+
+            <!-- 3-Point Fast Telemetry Pills -->
+            <div class="accessories-stat-pills">
+              <div class="acc-pill-item">
+                <i class="fa-solid fa-weight-hanging acc-pill-icon" aria-hidden="true"></i>
+                <span class="acc-pill-text">180 lbs Pull Force Tested</span>
+              </div>
+              <div class="acc-pill-item">
+                <i class="fa-solid fa-volume-xmark acc-pill-icon" aria-hidden="true"></i>
+                <span class="acc-pill-text">0 dB Clink-Free Silence</span>
+              </div>
+              <div class="acc-pill-item">
+                <i class="fa-solid fa-water acc-pill-icon" aria-hidden="true"></i>
+                <span class="acc-pill-text">100% Saltwater Impervious</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visual Spotlight Card -->
+          <div class="accessories-hero-visual">
+            <img src="assets/images/accessories/p41.jpg"
+              alt="Active companion dog wearing solid stainless steel tag and hardened locking carabiner"
+              class="accessories-hero-img" width="600" height="460" loading="eager">
+            <div class="accessories-floating-badge">
+              <div class="badge-pulse"></div>
+              <div>
+                <span class="badge-txt-primary">Lab Certified 180 lbs Load</span>
+                <span class="badge-txt-sub">Tempered Marine Spring Steel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: THE QUICK-RELEASE HARDWARE QUAD (4 STRICTLY EVEN CARDS)
+         4-column desktop grid, equal heights, aligned action triggers
+         ====================================================================== -->
+    <section class="accessories-quad-section" id="quick-release-quad" aria-labelledby="quad-heading">
+      <div class="container-custom">
+        <div class="about-section-header">
+          <div class="about-eyebrow">
+            <i class="fa-solid fa-wrench" aria-hidden="true"></i>
+            <span>Heavy-Duty Tag Fasteners</span>
+          </div>
+          <h2 class="about-section-title" id="quad-heading">
+            Four Indestructible Attachment Options
+          </h2>
+          <p class="about-section-desc">
+            Choose the ideal connector for your pet's activity level. Every piece is forged from pure solid alloys that
+            never warp, bend, or pull loose.
+          </p>
+        </div>
+
+        <!-- 4 Strictly Even Hardware Cards -->
+        <div class="accessories-quad-grid">
+          <!-- Card 1: Braided Aviation Wire Cable -->
+          <article class="accessory-card">
+            <div class="accessory-card-img-wrap">
+              <img src="assets/images/accessories/p42.jpg"
+                alt="Aviation grade braided 316 stainless steel wire cable tag lock with threaded barrel" width="500"
+                height="350" loading="lazy">
+              <span class="acc-spec-badge">Aircraft Cable</span>
+              <span class="acc-pull-rating">200 lbs</span>
+            </div>
+            <div class="accessory-card-body">
+              <div>
+                <h3 class="acc-card-title">Aviation Braided Cable</h3>
+                <p class="acc-card-desc">
+                  Threaded barrel twist-lock ring made of 7x7 braided 316 stainless cable. Cannot be pried open by
+                  branches or dense brush.
+                </p>
+              </div>
+              <div>
+                <div class="acc-meta-strip">
+                  <span class="acc-price-tag">$8.00</span>
+                  <span class="acc-stock-tag"><i class="fa-solid fa-check" aria-hidden="true"></i> In Stock</span>
+                </div>
+                <button type="button" class="btn-acc-action">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
+                  <span>Add To Tag Rig</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Solid Spring Micro Carabiner -->
+          <article class="accessory-card">
+            <div class="accessory-card-img-wrap">
+              <img src="assets/images/accessories/p43.jpg"
+                alt="Micro tactical spring gate carabiner for fast pet tag transfer between harnesses" width="500"
+                height="350" loading="lazy">
+              <span class="acc-spec-badge">Quick-Snap</span>
+              <span class="acc-pull-rating">160 lbs</span>
+            </div>
+            <div class="accessory-card-body">
+              <div>
+                <h3 class="acc-card-title">Tactical Spring Carabiner</h3>
+                <p class="acc-card-desc">
+                  Heavy-duty spring gate mechanism allows 2-second tag transfers between daily walking collars, car
+                  harnesses, and travel crates.
+                </p>
+              </div>
+              <div>
+                <div class="acc-meta-strip">
+                  <span class="acc-price-tag">$10.00</span>
+                  <span class="acc-stock-tag"><i class="fa-solid fa-check" aria-hidden="true"></i> In Stock</span>
+                </div>
+                <button type="button" class="btn-acc-action">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
+                  <span>Add To Tag Rig</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Dual-Loop Tempered Split Ring -->
+          <article class="accessory-card">
+            <div class="accessory-card-img-wrap">
+              <img src="assets/images/accessories/p44.jpg"
+                alt="Dual loop tempered spring steel split rings in solid brass and silver finish" width="500"
+                height="350" loading="lazy">
+              <span class="acc-spec-badge">Dual-Coil</span>
+              <span class="acc-pull-rating">180 lbs</span>
+            </div>
+            <div class="accessory-card-body">
+              <div>
+                <h3 class="acc-card-title">Tempered Dual Split Ring</h3>
+                <p class="acc-card-desc">
+                  Double-wound spring temper steel that returns to zero-gap closure every single time. Guarantees tag
+                  never slips off the collar D-ring.
+                </p>
+              </div>
+              <div>
+                <div class="acc-meta-strip">
+                  <span class="acc-price-tag">$6.00</span>
+                  <span class="acc-stock-tag"><i class="fa-solid fa-check" aria-hidden="true"></i> In Stock</span>
+                </div>
+                <button type="button" class="btn-acc-action">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
+                  <span>Add To Tag Rig</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: S-Biner Dual Gate Clip -->
+          <article class="accessory-card">
+            <div class="accessory-card-img-wrap">
+              <img src="assets/images/accessories/p45.jpg"
+                alt="Dual gated S-biner locking clip for independent tag and leash attachment" width="500" height="350"
+                loading="lazy">
+              <span class="acc-spec-badge">Dual-Gate</span>
+              <span class="acc-pull-rating">140 lbs</span>
+            </div>
+            <div class="accessory-card-body">
+              <div>
+                <h3 class="acc-card-title">Dual-Gated S-Biner Clip</h3>
+                <p class="acc-card-desc">
+                  Two independent spring gates keep tag securely docked on one side while providing effortless one-click
+                  attachment to any collar ring.
+                </p>
+              </div>
+              <div>
+                <div class="acc-meta-strip">
+                  <span class="acc-price-tag">$9.00</span>
+                  <span class="acc-stock-tag"><i class="fa-solid fa-check" aria-hidden="true"></i> In Stock</span>
+                </div>
+                <button type="button" class="btn-acc-action">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
+                  <span>Add To Tag Rig</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: SILICONE SOUND-DAMPENING BUMPERS & NIGHT GLOW (3 EVEN CARDS)
+         3-column layout, acoustic clink decibel ratings, identical heights
+         ====================================================================== -->
+    <section class="accessories-silencers-section" id="silencer-bumpers" aria-labelledby="silencer-heading">
+      <div class="container-custom">
+        <div class="about-section-header">
+          <div class="about-eyebrow">
+            <i class="fa-solid fa-bell-slash" aria-hidden="true"></i>
+            <span>Acoustic Collar Silence</span>
+          </div>
+          <h2 class="about-section-title" id="silencer-heading">
+            Zero Collar Clinking. Night-Time Luminescence.
+          </h2>
+          <p class="about-section-desc">
+            End the 3 AM collar jingling forever. Medical-grade vulcanized silicone silencers wrap snugly around your
+            metal tag edges for peaceful sleep and night visibility.
+          </p>
+        </div>
+
+        <!-- 3 Perfectly Even Silencer Cards -->
+        <div class="accessories-silencer-grid">
+          <!-- Card 1: Stealth Matte Black -->
+          <article class="silencer-card">
+            <div class="silencer-img-wrap">
+              <img src="assets/images/accessories/p46.jpg"
+                alt="Matte black silicone sound dampening bumper on custom metal pet tag" width="600" height="400"
+                loading="lazy">
+              <span class="silencer-acoustic-badge">
+                <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
+                <span>0 dB Clink-Free</span>
+              </span>
+            </div>
+            <div class="silencer-body">
+              <div>
+                <h3 class="silencer-title">Stealth Matte Black Bumper</h3>
+                <p class="silencer-desc">
+                  Ultra-low profile design that encases the outer rim. Completely silences metal-on-metal collision with
+                  water bowls and leash snaps.
+                </p>
+                <div class="silencer-spec-table">
+                  <div>
+                    <span class="silencer-spec-lbl">Material</span>
+                    <span class="silencer-spec-val">Pure Silicone</span>
+                  </div>
+                  <div>
+                    <span class="silencer-spec-lbl">Sound Drop</span>
+                    <span class="silencer-spec-val">-100% Clink</span>
+                  </div>
+                  <div>
+                    <span class="silencer-spec-lbl">Weather</span>
+                    <span class="silencer-spec-val">-40° to 120°C</span>
+                  </div>
+                </div>
+              </div>
+              <div class="silencer-foot">
+                <span class="acc-price-tag">$5.00</span>
+                <button type="button" class="btn btn-secondary">
+                  <span>Select Black</span>
+                  <i class="fa-solid fa-plus ml-1" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Photoluminescent Night Glow -->
+          <article class="silencer-card">
+            <div class="silencer-img-wrap">
+              <img src="assets/images/accessories/p47.jpg"
+                alt="Glow in the dark luminescent green tag silencer bumper at twilight" width="600" height="400"
+                loading="lazy">
+              <span class="silencer-acoustic-badge">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                <span>8-Hour Glow</span>
+              </span>
+            </div>
+            <div class="silencer-body">
+              <div>
+                <h3 class="silencer-title">Luminescent Night-Glow Bumper</h3>
+                <p class="silencer-desc">
+                  Charges in 10 minutes of sunlight to emit a vivid emerald beacon all night long. Keeps off-leash pets
+                  instantly spotted in dark yards and campsites.
+                </p>
+                <div class="silencer-spec-table">
+                  <div>
+                    <span class="silencer-spec-lbl">Luminance</span>
+                    <span class="silencer-spec-val">8h Visible</span>
+                  </div>
+                  <div>
+                    <span class="silencer-spec-lbl">Sound Drop</span>
+                    <span class="silencer-spec-val">-100% Clink</span>
+                  </div>
+                  <div>
+                    <span class="silencer-spec-lbl">Recharge</span>
+                    <span class="silencer-spec-val">10m Sunlight</span>
+                  </div>
+                </div>
+              </div>
+              <div class="silencer-foot">
+                <span class="acc-price-tag">$6.00</span>
+                <button type="button" class="btn btn-secondary">
+                  <span>Select Glow</span>
+                  <i class="fa-solid fa-plus ml-1" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Forest Trail Tactical Shock Bumper -->
+          <article class="silencer-card">
+            <div class="silencer-img-wrap">
+              <img src="assets/images/accessories/p48.jpg"
+                alt="Forest trail high impact tactical protective bumper for adventure dogs" width="600" height="400"
+                loading="lazy">
+              <span class="silencer-acoustic-badge">
+                <i class="fa-solid fa-shield-cat" aria-hidden="true"></i>
+                <span>Shock Shield</span>
+              </span>
+            </div>
+            <div class="silencer-body">
+              <div>
+                <h3 class="silencer-title">Trail Tactical Shock Bumper</h3>
+                <p class="silencer-desc">
+                  Reinforced ribbed perimeter engineered for hunting and mountain dogs. Absorbs heavy rock impacts while
+                  keeping tag engraving pristine.
+                </p>
+                <div class="silencer-spec-table">
+                  <div>
+                    <span class="silencer-spec-lbl">Impact</span>
+                    <span class="silencer-spec-val">High-G Rating</span>
+                  </div>
+                  <div>
+                    <span class="silencer-spec-lbl">Sound Drop</span>
+                    <span class="silencer-spec-val">-100% Clink</span>
+                  </div>
+                  <div>
+                    <span class="silencer-spec-lbl">Grip Fit</span>
+                    <span class="silencer-spec-val">Deep Grooved</span>
+                  </div>
+                </div>
+              </div>
+              <div class="silencer-foot">
+                <span class="acc-price-tag">$6.00</span>
+                <button type="button" class="btn btn-secondary">
+                  <span>Select Trail</span>
+                  <i class="fa-solid fa-plus ml-1" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: WATERPROOF ADVENTURE COLLARS & STRAPS (2 WIDE CARDS)
+         2-column wide layout, checkmark specs, sizing pills, aligned price
+         ====================================================================== -->
+    <section class="accessories-collars-section" id="adventure-collars" aria-labelledby="collars-heading">
+      <div class="container-custom">
+        <div class="about-section-header">
+          <div class="about-eyebrow">
+            <i class="fa-solid fa-compass" aria-hidden="true"></i>
+            <span>Tested On Wild Trails</span>
+          </div>
+          <h2 class="about-section-title" id="collars-heading">
+            Engineered Collars Built For Solid Metal Tags
+          </h2>
+          <p class="about-section-desc">
+            Standard webbing frays and smells. Our collars use submersible waterproof BioThane and artisan saddle
+            leather tailored to carry engraved tags securely.
+          </p>
+        </div>
+
+        <!-- 2 Wide Cards -->
+        <div class="accessories-collar-grid">
+          <!-- Card A: Waterproof BioThane Collar -->
+          <article class="collar-card">
+            <div class="collar-img-wrap">
+              <img src="assets/images/accessories/p49.jpg"
+                alt="Waterproof BioThane dog adventure collar with solid brass hardware" width="700" height="400"
+                loading="lazy">
+            </div>
+            <div class="collar-body">
+              <div>
+                <h3 class="collar-title">Submersible BioThane Adventure Collar</h3>
+                <p class="collar-desc">
+                  Flexible high-density polymer coated webbing that resists lake water, mud, ocean salt, and bacteria.
+                  Cleans with a single water wipe.
+                </p>
+                <div class="collar-specs-list">
+                  <div class="collar-spec-bullet">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                    <span>Solid C360 Brass Buckle &amp; Welded D-Ring</span>
+                  </div>
+                  <div class="collar-spec-bullet">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                    <span>1,000 lbs Break Strength Rating</span>
+                  </div>
+                  <div class="collar-spec-bullet">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                    <span>100% Odorless &amp; Non-Porous Surface</span>
+                  </div>
+                </div>
+                <div class="collar-sizes-row">
+                  <span class="collar-size-pill">Small (10-14")</span>
+                  <span class="collar-size-pill">Medium (14-18")</span>
+                  <span class="collar-size-pill">Large (18-24")</span>
+                </div>
+              </div>
+              <div class="collar-foot">
+                <span class="collar-price">$28.00</span>
+                <a href="design.html" class="btn btn-primary">
+                  <span>Configure Rig</span>
+                  <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card B: Artisan Saddle Leather Strap -->
+          <article class="collar-card">
+            <div class="collar-img-wrap">
+              <img src="assets/images/accessories/p50.jpg"
+                alt="Artisan hand-stitched full grain vegetable tanned leather dog collar" width="700" height="400"
+                loading="lazy">
+            </div>
+            <div class="collar-body">
+              <div>
+                <h3 class="collar-title">Heritage Full-Grain Saddle Leather Collar</h3>
+                <p class="collar-desc">
+                  Vegetable-tanned full-grain bridle leather hand-stitched with waxed linen thread. Burnished edges
+                  prevent fur chafing while developing deep patina.
+                </p>
+                <div class="collar-specs-list">
+                  <div class="collar-spec-bullet">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                    <span>316 Marine Stainless Steel Roller Buckle</span>
+                  </div>
+                  <div class="collar-spec-bullet">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                    <span>Hand-Beveled &amp; Beeswax Burnished Edges</span>
+                  </div>
+                  <div class="collar-spec-bullet">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                    <span>Non-Toxic Eco Vegetable-Tanning Process</span>
+                  </div>
+                </div>
+                <div class="collar-sizes-row">
+                  <span class="collar-size-pill">Small (11-15")</span>
+                  <span class="collar-size-pill">Medium (15-19")</span>
+                  <span class="collar-size-pill">Large (19-25")</span>
+                </div>
+              </div>
+              <div class="collar-foot">
+                <span class="collar-price">$36.00</span>
+                <a href="design.html" class="btn btn-primary">
+                  <span>Configure Rig</span>
+                  <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: COMPLETE HARDWARE KIT BUNDLE CTA
+         Ultra-premium dark glassmorphism banner with action triggers
+         ====================================================================== -->
+    <section class="accessories-cta-section" id="hardware-bundle-cta" aria-labelledby="bundle-cta-heading">
+      <div class="accessories-cta-bg">
+        <img src="assets/images/accessories/p51.jpg" alt="Joyful companion dog splashing in cold mountain river"
+          width="1200" height="600" loading="lazy">
+      </div>
+      <div class="accessories-cta-overlay"></div>
+      <div class="container-custom">
+        <div class="accessories-cta-content">
+          <div class="accessories-eyebrow">
+            <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+            <span>Complete Hardware Rig Bundle</span>
+          </div>
+          <h2 class="accessories-cta-title" id="bundle-cta-heading">
+            Equip Your Companion With Indestructible Hardware
+          </h2>
+          <p class="accessories-cta-desc">
+            Bundle any 2 tempered split rings, 1 quick-release spring carabiner, and 2 sound silencer bumpers for just
+            $18 (Save 35% on essential gear).
+          </p>
+
+          <div class="accessories-cta-actions">
+            <a href="design.html" class="btn btn-primary" id="acc-bundle-order-btn">
+              <span>Order Hardware Bundle ($18)</span>
+              <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+            </a>
+            <a href="products.html" class="btn btn-secondary" id="acc-explore-tags-btn">
+              <span>Choose Custom Tag First</span>
+              <i class="fa-solid fa-wand-magic-sparkles ml-2" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="accessories-cta-badges">
+            <div class="acc-reassure-item">
+              <i class="fa-solid fa-dumbbell text-amber-500" aria-hidden="true"></i>
+              <span>Tested to 180 lbs Pull Force</span>
+            </div>
+            <div class="acc-reassure-item">
+              <i class="fa-solid fa-water text-amber-500" aria-hidden="true"></i>
+              <span>100% Saltwater Rust-Proof</span>
+            </div>
+            <div class="acc-reassure-item">
+              <i class="fa-solid fa-clock text-amber-500" aria-hidden="true"></i>
+              <span>Dispatches in 24 Hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       SCROLL TO TOP BUTTON
+       ====================================================================== -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top of page" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ======================================================================
+       SHARED FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-top-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand-wrap">
+          <div class="footer-brand">
+            <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="footer-logo">
+            <div class="footer-brand-text">
+              <h3>PetTags<span>&amp;Co.</span></h3>
+              <p>Modern Tag Lab</p>
+            </div>
+          </div>
+          <p class="footer-bio">
+            Crafting premium, deep-laser-engraved ID tags and luxury accessories to keep your beloved pets safe,
+            stylish, and adventure-ready.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-dot"></span>
+            <span>Atelier Status: OPEN / Live Engraving</span>
+          </div>
+          <div class="footer-social-wrap">
+            <span class="footer-social-title">Follow Our Atelier</span>
+            <div class="footer-socials">
+              <a href="#" class="footer-social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                  </path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Pinterest">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="12" y1="8" x2="12" y2="16"></line>
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 12a4 4 0 0 1 8 0c0 2.21-1.79 4-4 4"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 1: Shop Collections -->
+        <div>
+          <h4 class="footer-col-title">Shop Collections</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="products.html">Dog ID Tags</a></li>
+            <li class="footer-link-item"><a href="products.html">Cat ID Tags</a></li>
+            <li class="footer-link-item"><a href="products.html">Brass &amp; Stainless Tags</a></li>
+            <li class="footer-link-item"><a href="accessories.html">Collar Mount Tags</a></li>
+            <li class="footer-link-item"><a href="accessories.html">Silencers &amp; Split Rings</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Navigation & Company -->
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="about.html">About Our Craft</a></li>
+            <li class="footer-link-item"><a href="design.html">Tag Customizer Studio</a></li>
+            <li class="footer-link-item"><a href="contact.html">Customer Support</a></li>
+            <li class="footer-link-item"><a href="contact.html">Bulk / Vet Orders</a></li>
+            <li class="footer-link-item"><a href="contact.html">Lifetime Warranty</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Newsletter & Workshop -->
+        <div>
+          <h4 class="footer-col-title">Workshop Updates</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for seasonal tag drops, pet safety tips, and 15% off your first custom engraving.
+          </p>
+          <form class="footer-newsletter-form"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to PetTags & Co.!');">
+            <div class="footer-input-row">
+              <input type="email" required placeholder="Enter your pet parent email" class="footer-input"
+                aria-label="Email address for newsletter">
+            </div>
+            <button type="submit" class="footer-newsletter-btn">
+              <span>Join Family</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Custom Pet ID Tag &amp; Accessory Engraving Shop. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Shipping &amp; Engraving Guarantee</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Global Javascript Logic (Zero Inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

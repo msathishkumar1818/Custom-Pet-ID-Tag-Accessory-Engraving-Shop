@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Tag Lab &amp; Durability Series | Custom Pet ID Tag Shop</title>
+  <meta name="description"
+    content="Explore our high-performance Modern Pet Tag Lab. Precision engineered aerodynamic shapes, scratch-proof PVD coatings, and hybrid QR emergency technology.">
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/icons/logo.png">
+
+  <!-- Core External Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Page-Specific Mobile Alignment Engine (Strictly Scoped to home-2.html) -->
+  <style>
+    @media (max-width: 768px) {
+
+      /* Section 2: Silhouette Blueprint Cards -> 100% Full-Width Clean Vertical Stack */
+      .blueprint-matrix-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+      }
+
+      .blueprint-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1.25rem !important;
+        padding: 1.25rem !important;
+        width: 100% !important;
+        border-radius: 1.25rem !important;
+        box-sizing: border-box !important;
+      }
+
+      .blueprint-img-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 220px !important;
+        border-radius: 1rem !important;
+        overflow: hidden !important;
+        position: relative !important;
+        flex-shrink: 0 !important;
+        aspect-ratio: auto !important;
+        display: block !important;
+      }
+
+      .blueprint-img-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+      }
+
+      .blueprint-code-badge {
+        position: absolute !important;
+        top: 0.75rem !important;
+        left: 0.75rem !important;
+        z-index: 2 !important;
+      }
+
+      [dir="rtl"] .blueprint-code-badge {
+        left: auto !important;
+        right: 0.75rem !important;
+      }
+
+      .blueprint-info {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.85rem !important;
+        box-sizing: border-box !important;
+      }
+
+      .blueprint-header-row {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+      }
+
+      .blueprint-header-row h3 {
+        font-size: 1.3rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+      }
+
+      .blueprint-pill {
+        font-size: 0.72rem !important;
+        padding: 0.25rem 0.65rem !important;
+      }
+
+      .blueprint-specs-row {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        flex-wrap: wrap !important;
+      }
+
+      .blueprint-action-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        padding: 0.75rem 1rem !important;
+        border-radius: 0.75rem !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Section 5: Ambassador Pack Strip Cards -> 100% Full-Width Clean Vertical Stack */
+      .pack-strip-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+      }
+
+      .pack-strip-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1.25rem !important;
+        padding: 1.25rem !important;
+        width: 100% !important;
+        border-radius: 1.25rem !important;
+        box-sizing: border-box !important;
+      }
+
+      .pack-strip-media {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 220px !important;
+        border-radius: 1rem !important;
+        overflow: hidden !important;
+        position: relative !important;
+        flex-shrink: 0 !important;
+        aspect-ratio: auto !important;
+        display: block !important;
+      }
+
+      .pack-strip-media img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+      }
+
+      .pack-role-badge {
+        position: absolute !important;
+        top: 0.75rem !important;
+        left: 0.75rem !important;
+        z-index: 2 !important;
+      }
+
+      [dir="rtl"] .pack-role-badge {
+        left: auto !important;
+        right: 0.75rem !important;
+      }
+
+      .pack-strip-info {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.85rem !important;
+        box-sizing: border-box !important;
+      }
+
+      .pack-strip-top {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: wrap !important;
+        gap: 0.65rem !important;
+        width: 100% !important;
+      }
+
+      .pack-name-row {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.65rem !important;
+      }
+
+      .pack-pet-name {
+        font-size: 1.35rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+      }
+
+      .pack-gear-pill {
+        font-size: 0.72rem !important;
+        padding: 0.35rem 0.75rem !important;
+        border-radius: 9999px !important;
+        white-space: normal !important;
+        line-height: 1.35 !important;
+        max-width: 100% !important;
+        text-align: right !important;
+      }
+
+      .pack-strip-quote {
+        font-size: 0.96rem !important;
+        line-height: 1.55 !important;
+        color: var(--text-main) !important;
+        margin: 0 !important;
+      }
+
+      .pack-strip-footer {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding-top: 0.65rem !important;
+        border-top: 1px dashed var(--border-color) !important;
+        width: 100% !important;
+      }
+
+      /* Section 3 & 4: Hybrid Box & HUD Telemetry Cards */
+      .hybrid-box {
+        padding: 1.75rem 1.25rem !important;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+
+      .hybrid-media {
+        width: 100% !important;
+        height: 240px !important;
+        border-radius: 1rem !important;
+        overflow: hidden !important;
+      }
+
+      .hybrid-media img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+
+      .hud-telemetry-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+
+      .hud-telemetry-card {
+        min-height: 320px !important;
+        width: 100% !important;
+      }
+
+      /* Hero button group on 768px tablet & mobile - strictly matches .hero-preview-box width (32rem) */
+      .hero-btn-group {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 32rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 2rem !important;
+        gap: 0.85rem !important;
+        box-sizing: border-box !important;
+      }
+
+      .hero-btn-group a,
+      .hero-btn-group .btn-primary,
+      .hero-btn-group .btn-secondary {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 0.95rem 1.5rem !important;
+        font-size: 0.98rem !important;
+        border-radius: 0.75rem !important;
+      }
+    }
+
+    /* 440px / 427px Viewports */
+    @media (max-width: 440px) {
+
+      .blueprint-img-wrap,
+      .pack-strip-media {
+        height: 205px !important;
+      }
+
+      .blueprint-header-row h3,
+      .pack-pet-name {
+        font-size: 1.25rem !important;
+      }
+
+      .pack-strip-quote {
+        font-size: 0.92rem !important;
+      }
+
+      .blueprint-card,
+      .pack-strip-card {
+        padding: 1.15rem 1rem !important;
+      }
+    }
+
+    /* 393px / 375px Viewports */
+    @media (max-width: 393px) {
+
+      .blueprint-img-wrap,
+      .pack-strip-media {
+        height: 190px !important;
+      }
+
+      .blueprint-header-row h3,
+      .pack-pet-name {
+        font-size: 1.2rem !important;
+      }
+
+      .pack-strip-quote {
+        font-size: 0.88rem !important;
+        line-height: 1.5 !important;
+      }
+
+      .blueprint-card,
+      .pack-strip-card {
+        padding: 1rem 0.9rem !important;
+        gap: 1rem !important;
+      }
+
+      .pack-gear-pill {
+        font-size: 0.68rem !important;
+        padding: 0.3rem 0.65rem !important;
+      }
+    }
+
+    /* 360px Viewports */
+    @media (max-width: 360px) {
+
+      .blueprint-img-wrap,
+      .pack-strip-media {
+        height: 175px !important;
+      }
+
+      .blueprint-header-row h3,
+      .pack-pet-name {
+        font-size: 1.15rem !important;
+      }
+
+      .pack-strip-quote {
+        font-size: 0.84rem !important;
+        line-height: 1.48 !important;
+      }
+
+      .blueprint-card,
+      .pack-strip-card {
+        padding: 0.9rem 0.8rem !important;
+        gap: 0.9rem !important;
+      }
+
+      .blueprint-specs-row {
+        gap: 0.35rem !important;
+      }
+
+      .blueprint-spec-tag {
+        font-size: 0.68rem !important;
+        padding: 0.2rem 0.45rem !important;
+      }
+
+      .pack-gear-pill {
+        font-size: 0.65rem !important;
+        padding: 0.25rem 0.55rem !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       BRANDED PRELOADER
+       ====================================================================== -->
+  <div id="page-preloader" role="status" aria-live="polite" aria-label="Loading Custom Pet ID Tag Shop">
+    <div class="loader-badge">
+      <div class="loader-spinner"></div>
+      <img src="assets/images/icons/logo.png" alt="Custom Pet ID Tag Shop Logo">
+    </div>
+    <p class="loader-text">Custom Pet Engraving</p>
+  </div>
+
+  <!-- ======================================================================
+       FIXED COMPACT SINGLE-LINE HEADER
+       ====================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+
+      <!-- Brand Identity -->
+      <a href="index.html" class="brand-link" aria-label="Custom Pet ID Tag & Accessory Engraving Shop Home">
+        <div class="brand-logo-wrap">
+          <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-meta">
+          <span class="brand-title">PetTags<span>&amp;Co.</span></span>
+          <span class="brand-subtitle">Modern Tag Lab</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Nav Items -->
+      <nav class="nav-desktop-wrapper" aria-label="Main Navigation">
+        <ul class="nav-desktop">
+
+          <!-- 1. Home with Click-Only Dropdown -->
+          <li class="nav-dropdown-wrapper js-nav-dropdown">
+            <button type="button" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="dropdown-arrow rtl-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-panel" role="menu">
+              <li role="none">
+                <a href="index.html" role="menuitem">
+                  <span>Home 1 (Artisan Studio)</span>
+                  <span class="tag-pill">Classic</span>
+                </a>
+              </li>
+              <li role="none">
+                <a href="home-2.html" role="menuitem">
+                  <span>Home 2 (Modern Tag Lab)</span>
+                  <span class="tag-pill">Modern</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 2. Products (By Pet Type) -->
+          <li>
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+
+          <!-- 3. Design Your Tag -->
+          <li>
+            <a href="design.html" class="nav-link">Design Your Tag</a>
+          </li>
+
+          <!-- 4. About (Mandatory) -->
+          <li>
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <!-- 5. Accessories -->
+          <li>
+            <a href="accessories.html" class="nav-link">Accessories</a>
+          </li>
+
+          <!-- 6. Contact (Directly Visible) -->
+          <li>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Desktop Controls: RTL, Dark Mode, Action CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Button -->
+        <button type="button" class="ctrl-btn js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)"
+          title="Switch RTL/LTR">
+          <svg class="rtl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="rtl-text font-bold text-xs rtl-badge-text">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle Button (#000000 Strict) -->
+        <button type="button" class="ctrl-btn js-dark-toggle" aria-label="Toggle Dark Mode" title="Switch Theme">
+          <!-- Moon Icon for Light Mode -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon for Dark Mode -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- CTA Action Button -->
+        <a href="design.html" class="btn-header-cta" id="header-cta-btn">
+          <span>Design Tag</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" class="rtl-flip">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Drawer Toggle Button -->
+        <button type="button" class="btn-mobile-toggle js-mobile-toggle" aria-label="Open Mobile Menu"
+          aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MOBILE DRAWER NAVIGATION
+       ====================================================================== -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop" tabindex="-1"></div>
+
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <!-- Drawer Header -->
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="drawer-brand-logo">
+        <div>
+          <div class="drawer-brand-name">PetTags&amp;Co.</div>
+          <div class="drawer-brand-sub">Modern Tag Lab</div>
+        </div>
+      </div>
+      <button type="button" class="btn-drawer-close js-drawer-close" aria-label="Close Mobile Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Navigation Links -->
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+
+        <!-- Home Accordion (CLICK ONLY) -->
+        <li class="drawer-accordion js-drawer-accordion">
+          <button type="button" class="drawer-accordion-btn" aria-expanded="false">
+            <span>Home</span>
+            <svg class="drawer-accordion-arrow rtl-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="drawer-accordion-content">
+            <li>
+              <a href="index.html" class="drawer-sublink">
+                <span>Home 1 (Artisan Studio)</span>
+              </a>
+            </li>
+            <li>
+              <a href="home-2.html" class="drawer-sublink">
+                <span>Home 2 (Modern Tag Lab)</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="products.html" class="drawer-nav-link">Products</a></li>
+        <li><a href="design.html" class="drawer-nav-link">Design Your Tag</a></li>
+        <li><a href="about.html" class="drawer-nav-link">About Us</a></li>
+        <li><a href="accessories.html" class="drawer-nav-link">Accessories</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact</a></li>
+
+      </ul>
+    </div>
+
+    <!-- Drawer Footer with Dark Mode and RTL Controls -->
+    <div class="drawer-footer">
+      <div class="drawer-ctrls">
+        <button type="button" class="drawer-ctrl-item js-dark-toggle" aria-label="Toggle Dark Mode">
+          <svg class="icon-moon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span>Dark Mode</span>
+        </button>
+
+        <button type="button" class="drawer-ctrl-item js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" style="width:16px;height:16px;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="rtl-text font-bold">RTL</span>
+          <span>Switch</span>
+        </button>
+      </div>
+
+      <a href="design.html" class="btn-header-cta drawer-cta-full">
+        <span>Start Customizing</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" class="rtl-flip">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MAIN CONTENT: HOME 2 (MODERN TAG LAB) — EXACTLY 6 SECTIONS
+       ====================================================================== -->
+  <main id="main-content">
+
+    <!-- ------------------------------------------------------------------
+         SECTION 1: HIGH-TECH HERO (Background Image with Centered Overlay)
+         ------------------------------------------------------------------ -->
+    <section class="hero-modern-section" id="hero-modern-section" aria-labelledby="hero-2-heading">
+      <!-- Background Image Layer -->
+      <div class="hero-modern-bg">
+        <img src="assets/images/hero/hero-2-lab.jpg" alt="Active dog outdoors equipped with modern engraved pet ID tag"
+          loading="eager" width="1920" height="1080">
+      </div>
+      <div class="hero-modern-overlay"></div>
+
+      <div class="container-custom">
+        <div class="hero-modern-center-wrap">
+
+          <!-- Pill Badge (Centered) -->
+          <div class="lab-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Aerospace Alloy Series &bull; 0.4mm Deep Burn</span>
+          </div>
+
+          <!-- Main Hero Title (Centered) -->
+          <h1 id="hero-2-heading" class="hero-modern-title">
+            Precision-Engineered Pet Tags. <span>Zero Noise.</span> Total Security.
+          </h1>
+
+          <!-- Hero Subtitle (Centered) -->
+          <p class="hero-modern-desc">
+            Geometric contours crafted from CNC-machined titanium and 316L marine stainless. Calibrated to withstand 75
+            lbs of pull force and lifelong trail friction.
+          </p>
+
+          <!-- Interactive Tag Preview Widget (Centered Box) -->
+          <div class="hero-preview-box">
+            <div class="hero-preview-top">
+              <span>Real-Time Laser Matrix</span>
+              <span class="tag-pill">PVD Black Finish</span>
+            </div>
+            <div class="live-tag-display">
+              <div class="live-tag-text">
+                <h4>&bull; ATLAS &bull;</h4>
+                <p>MICROCHIPPED &bull; 555-019-2849</p>
+              </div>
+              <div class="live-tag-qr" title="Scan to test emergency pet profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                  <path d="M14 14h3v3h-3z"></path>
+                  <path d="M17 17h4v4h-4z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons (Centered) -->
+          <div class="hero-btn-group">
+            <a href="design.html" class="btn-primary">
+              <span>Configure Tag In Lab</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-sm rtl-flip">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="products.html" class="btn-secondary">
+              <span>Compare Geometries</span>
+            </a>
+          </div>
+
+          <!-- Certification Pill (Centered) -->
+          <div class="hero-modern-floating-pill is-centered">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" class="icon-xs">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>MIL-STD-810G Impact Certified</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 2: SHAPES ARCHITECTURE LAB (2x2 Engineered Blueprint Matrix)
+         ------------------------------------------------------------------ -->
+    <section class="shapes-lab-section" id="shapes-lab-section" aria-labelledby="shapes-heading">
+      <div class="container-custom">
+
+        <div class="section-head">
+          <span class="section-eyebrow">Geometric Blueprints</span>
+          <h2 id="shapes-heading" class="section-title">Four Engineered Silhouette Profiles</h2>
+          <p class="section-subtitle">
+            Every geometry is chamfered with high-speed diamond fly-cutters to eliminate sharp pinch points on your
+            pet's fur.
+          </p>
+        </div>
+
+        <div class="blueprint-matrix-grid">
+
+          <!-- Shape 1: Hexagon Prism -->
+          <article class="blueprint-card">
+            <div class="blueprint-img-wrap">
+              <img src="assets/images/products/p13.jpg" alt="Modern Hexagon engraved pet ID tag on dog reading magazine"
+                loading="lazy" width="600" height="600">
+              <span class="blueprint-code-badge">SPEC-01</span>
+            </div>
+            <div class="blueprint-info">
+              <div class="blueprint-header-row">
+                <h3>The Hexagon Prism</h3>
+                <span class="blueprint-pill">Modern Sharp</span>
+              </div>
+              <div class="blueprint-specs-row">
+                <span class="blueprint-spec-tag">14g CNC Alloy</span>
+                <span class="blueprint-spec-tag">Up to 4 Lines</span>
+              </div>
+              <a href="design.html?shape=hexagon" class="blueprint-action-btn"
+                aria-label="Select Hexagon Prism profile for customization">
+                <span>Select Profile</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs rtl-flip">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Shape 2: Tactical Crest -->
+          <article class="blueprint-card">
+            <div class="blueprint-img-wrap">
+              <img src="assets/images/products/p14.jpg" alt="Tactical Shield Crest pet tag worn by active outdoor puppy"
+                loading="lazy" width="600" height="600">
+              <span class="blueprint-code-badge">SPEC-02</span>
+            </div>
+            <div class="blueprint-info">
+              <div class="blueprint-header-row">
+                <h3>The Tactical Crest</h3>
+                <span class="blueprint-pill">Trail Shield</span>
+              </div>
+              <div class="blueprint-specs-row">
+                <span class="blueprint-spec-tag">18g Marine Steel</span>
+                <span class="blueprint-spec-tag">Up to 5 Lines</span>
+              </div>
+              <a href="design.html?shape=shield" class="blueprint-action-btn"
+                aria-label="Select Tactical Crest profile for customization">
+                <span>Select Profile</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs rtl-flip">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Shape 3: Aerodynamic Round -->
+          <article class="blueprint-card">
+            <div class="blueprint-img-wrap">
+              <img src="assets/images/products/p15.jpg" alt="Aerodynamic Round smooth pet tag on domestic kitten"
+                loading="lazy" width="600" height="600">
+              <span class="blueprint-code-badge">SPEC-03</span>
+            </div>
+            <div class="blueprint-info">
+              <div class="blueprint-header-row">
+                <h3>The Aerodynamic Round</h3>
+                <span class="blueprint-pill">Zero Snag</span>
+              </div>
+              <div class="blueprint-specs-row">
+                <span class="blueprint-spec-tag">12g Solid Brass</span>
+                <span class="blueprint-spec-tag">Up to 4 Lines</span>
+              </div>
+              <a href="design.html?shape=round" class="blueprint-action-btn"
+                aria-label="Select Aerodynamic Round profile for customization">
+                <span>Select Profile</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs rtl-flip">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Shape 4: Contoured Bone -->
+          <article class="blueprint-card">
+            <div class="blueprint-img-wrap">
+              <img src="assets/images/products/p16.jpg"
+                alt="Reinforced Bone contour pet tag on fluffy white companion dog" loading="lazy" width="600"
+                height="600">
+              <span class="blueprint-code-badge">SPEC-04</span>
+            </div>
+            <div class="blueprint-info">
+              <div class="blueprint-header-row">
+                <h3>The Contoured Bone</h3>
+                <span class="blueprint-pill">Heritage Icon</span>
+              </div>
+              <div class="blueprint-specs-row">
+                <span class="blueprint-spec-tag">16g Heavy Blank</span>
+                <span class="blueprint-spec-tag">Up to 3 Lines</span>
+              </div>
+              <a href="design.html?shape=bone" class="blueprint-action-btn"
+                aria-label="Select Contoured Bone profile for customization">
+                <span>Select Profile</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs rtl-flip">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 3: SMART HYBRID TECH SPOTLIGHT (Laser + QR Ecosystem)
+         ------------------------------------------------------------------ -->
+    <section class="hybrid-tech-section" id="hybrid-tech-section" aria-labelledby="hybrid-heading">
+      <div class="container-custom">
+
+        <div class="hybrid-box">
+
+          <div class="hybrid-content">
+            <span class="lab-badge">Next-Gen Protection</span>
+            <h2 id="hybrid-heading">Dual Defense: <span>Laser + Dynamic QR</span></h2>
+            <p>
+              The reliability of deep physical laser engraving merged with an optional instant digital finder profile.
+              When your pet is scanned, finders see critical medical details immediately.
+            </p>
+
+            <ul class="hybrid-features">
+              <li class="hybrid-feature-item">
+                <div class="hybrid-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
+                  </svg>
+                </div>
+                <div class="hybrid-feature-text">
+                  <h4>Instant SMS Location Alert</h4>
+                  <p>Receive immediate smartphone notifications when anyone scans your pet's tag.</p>
+                </div>
+              </li>
+
+              <li class="hybrid-feature-item">
+                <div class="hybrid-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="hybrid-feature-text">
+                  <h4>Emergency Medical &amp; Diet Notes</h4>
+                  <p>Display vet contact, medication schedules, and allergies without battery limits.</p>
+                </div>
+              </li>
+
+              <li class="hybrid-feature-item">
+                <div class="hybrid-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="hybrid-feature-text">
+                  <h4>Permanent Zero-Battery Fallback</h4>
+                  <p>Physical phone numbers engraved 0.4mm deep remain 100% legible even if offline.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="design.html?mode=hybrid" class="btn-primary">
+              <span>Build Hybrid Smart Tag</span>
+            </a>
+          </div>
+
+          <div class="hybrid-media">
+            <img src="assets/images/sections/p17.jpg" alt="Close-up of smart laser engraved QR pet collar tag in action"
+              loading="lazy" width="800" height="700">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 4: DURABILITY TORTURE TESTS (3-Column Architectural Grid)
+         ------------------------------------------------------------------ -->
+    <section class="durability-lab-section" id="durability-lab-section" aria-labelledby="durability-heading">
+      <div class="container-custom">
+
+        <div class="section-head">
+          <span class="section-eyebrow">Lab Certified</span>
+          <h2 id="durability-heading" class="section-title">Torture-Tested for Extreme Wilderness</h2>
+          <p class="section-subtitle">
+            Aerospace stress certifications for relentless field durability.
+          </p>
+        </div>
+
+        <div class="hud-telemetry-grid">
+
+          <!-- Test 1: Salt Spray -->
+          <article class="hud-telemetry-card">
+            <img src="assets/images/sections/p18.jpg" alt="Dog swimming in saltwater ocean with corrosion-proof tag"
+              class="hud-bg-img" loading="lazy" width="800" height="600">
+            <div class="hud-telemetry-overlay">
+              <div class="hud-telemetry-header">
+                <span class="hud-metric-display">500 <small>HRS</small></span>
+
+              </div>
+              <div class="hud-telemetry-content">
+                <h3 class="hud-card-title">Salt Ocean Resistance</h3>
+                <div class="hud-status-pill">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>PASSED &bull; ZERO CORROSION</span>
+                </div>
+              </div>
+              <div class="hud-accent-bar" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <!-- Test 2: Abrasion -->
+          <article class="hud-telemetry-card">
+            <img src="assets/images/sections/p19.jpg" alt="Dog running through gravel and rock trails"
+              class="hud-bg-img" loading="lazy" width="800" height="600">
+            <div class="hud-telemetry-overlay">
+              <div class="hud-telemetry-header">
+                <span class="hud-metric-display">100k <small>CYCLES</small></span>
+
+              </div>
+              <div class="hud-telemetry-content">
+                <h3 class="hud-card-title">Rock &amp; Granite Abrasion</h3>
+                <div class="hud-status-pill">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>PASSED &bull; 100% LEGIBILITY</span>
+                </div>
+              </div>
+              <div class="hud-accent-bar" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <!-- Test 3: Tensile Pull -->
+          <article class="hud-telemetry-card">
+            <img src="assets/images/sections/p20.jpg" alt="Active outdoor cat exploring forest branches"
+              class="hud-bg-img" loading="lazy" width="800" height="600">
+            <div class="hud-telemetry-overlay">
+              <div class="hud-telemetry-header">
+                <span class="hud-metric-display">75 <small>LBS</small></span>
+
+              </div>
+              <div class="hud-telemetry-content">
+                <h3 class="hud-card-title">Loop Tensile Pull Test</h3>
+                <div class="hud-status-pill">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>PASSED &bull; ZERO STRUCTURAL </span>
+                </div>
+              </div>
+              <div class="hud-accent-bar" aria-hidden="true"></div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 5: AMBASSADOR PACK SPOTLIGHT (Even Cards)
+         ------------------------------------------------------------------ -->
+    <section class="ambassador-pack-section" id="ambassador-pack-section" aria-labelledby="ambassador-heading">
+      <div class="container-custom">
+
+        <div class="section-head">
+          <span class="section-eyebrow">Field Tested</span>
+          <h2 id="ambassador-heading" class="section-title">Tested by Real Adventure Working Packs</h2>
+          <p class="section-subtitle">
+            Field reports from real working companions and active pet guardians.
+          </p>
+        </div>
+
+        <div class="pack-strip-list">
+
+          <!-- Ambassador 1 -->
+          <article class="pack-strip-card">
+            <div class="pack-strip-media">
+              <img src="assets/images/testimonials/ambassador-1.jpg" alt="Rescue hound Scout running on the beach"
+                loading="lazy" width="800" height="550">
+              <span class="pack-role-badge">Beach Hound</span>
+            </div>
+            <div class="pack-strip-info">
+              <div class="pack-strip-top">
+                <div class="pack-name-row">
+                  <h3 class="pack-pet-name">Scout</h3>
+                  <span class="pack-location-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-xs"
+                      aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    San Diego, CA
+                  </span>
+                </div>
+                <span class="pack-gear-pill">The Hexagon &bull; Surgical 316L</span>
+              </div>
+              <p class="pack-strip-quote">&ldquo;Zero rust or fading after 18 months of rough ocean surf.&rdquo;</p>
+              <div class="pack-strip-footer">
+                <div class="pack-stars" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
+                <span class="pack-verified-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Field Verified
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ambassador 2 -->
+          <article class="pack-strip-card">
+            <div class="pack-strip-media">
+              <img src="assets/images/testimonials/ambassador-2.jpg"
+                alt="Ginger cat Jasper lounging with silent round tag" loading="lazy" width="800" height="550">
+              <span class="pack-role-badge">Quiet Prowler</span>
+            </div>
+            <div class="pack-strip-info">
+              <div class="pack-strip-top">
+                <div class="pack-name-row">
+                  <h3 class="pack-pet-name">Jasper</h3>
+                  <span class="pack-location-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-xs"
+                      aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Denver, CO
+                  </span>
+                </div>
+                <span class="pack-gear-pill">Aerodynamic Round &bull; Midnight Black</span>
+              </div>
+              <p class="pack-strip-quote">&ldquo;Completely silent with silicone bumper. Featherweight and
+                claw-proof.&rdquo;</p>
+              <div class="pack-strip-footer">
+                <div class="pack-stars" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
+                <span class="pack-verified-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Field Verified
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ambassador 3 -->
+          <article class="pack-strip-card">
+            <div class="pack-strip-media">
+              <img src="assets/images/testimonials/p21.jpg" alt="Australian Shepherd Kora wearing tactical shield tag"
+                loading="lazy" width="800" height="550">
+              <span class="pack-role-badge">Trail Shepherd</span>
+            </div>
+            <div class="pack-strip-info">
+              <div class="pack-strip-top">
+                <div class="pack-name-row">
+                  <h3 class="pack-pet-name">Kora</h3>
+                  <span class="pack-location-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-xs"
+                      aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Bozeman, MT
+                  </span>
+                </div>
+                <span class="pack-gear-pill">Tactical Shield &bull; Solid Brass</span>
+              </div>
+              <p class="pack-strip-quote">&ldquo;Hiked 30+ backcountry miles monthly. Deep laser engraving never wore
+                away.&rdquo;</p>
+              <div class="pack-strip-footer">
+                <div class="pack-stars" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
+                <span class="pack-verified-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Field Verified
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 6: FINAL ACTION CTA BANNER (Last Section Before Footer)
+         ------------------------------------------------------------------ -->
+    <section class="lab-cta-section" id="lab-cta-section" aria-labelledby="cta-2-heading">
+      <div class="lab-cta-bg">
+        <img src="assets/images/sections/p22.jpg" alt="Dog relaxing outdoors in nature with durable tag" loading="lazy"
+          width="1200" height="600">
+      </div>
+      <div class="lab-cta-overlay"></div>
+
+      <div class="container-custom">
+        <div class="lab-cta-content">
+          <div class="lab-cta-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span>Precision Customization Engine Online</span>
+          </div>
+
+          <h2 id="cta-2-heading" class="lab-cta-title">
+            Forge Your Pet's Indestructible Armor Today.
+          </h2>
+
+          <p class="lab-cta-desc">
+            Choose your geometric profile, select high-tensile hardware, and preview your custom laser engraving in
+            real-time. Built to outlast every adventure.
+          </p>
+
+          <div class="final-cta-actions">
+            <a href="design.html" class="btn-cta-white">
+              <span>Open Tag Customizer</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-sm rtl-flip">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="products.html" class="btn-secondary btn-secondary-glass">
+              <span>Explore All Shapes</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       SCROLL TO TOP BUTTON
+       ====================================================================== -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top of page" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ======================================================================
+       SHARED FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-top-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand-wrap">
+          <div class="footer-brand">
+            <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="footer-logo">
+            <div class="footer-brand-text">
+              <h3>PetTags<span>&amp;Co.</span></h3>
+              <p>Modern Tag Lab</p>
+            </div>
+          </div>
+          <p class="footer-bio">
+            Crafting premium, deep-laser-engraved ID tags and luxury accessories to keep your beloved pets safe,
+            stylish, and adventure-ready.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-dot"></span>
+            <span>Atelier Status: OPEN / Live Engraving</span>
+          </div>
+          <div class="footer-social-wrap">
+            <span class="footer-social-title">Follow Our Atelier</span>
+            <div class="footer-socials">
+              <a href="#" class="footer-social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                  </path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Pinterest">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="12" y1="8" x2="12" y2="16"></line>
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 12a4 4 0 0 1 8 0c0 2.21-1.79 4-4 4"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 1: Shop Collections -->
+        <div>
+          <h4 class="footer-col-title">Shop Collections</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="products.html">Dog ID Tags</a></li>
+            <li class="footer-link-item"><a href="products.html">Cat ID Tags</a></li>
+            <li class="footer-link-item"><a href="products.html">Brass &amp; Stainless Tags</a></li>
+            <li class="footer-link-item"><a href="accessories.html">Collar Mount Tags</a></li>
+            <li class="footer-link-item"><a href="accessories.html">Silencers &amp; Split Rings</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Navigation & Company -->
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="about.html">About Our Craft</a></li>
+            <li class="footer-link-item"><a href="design.html">Tag Customizer Studio</a></li>
+            <li class="footer-link-item"><a href="contact.html">Customer Support</a></li>
+            <li class="footer-link-item"><a href="contact.html">Bulk / Vet Orders</a></li>
+            <li class="footer-link-item"><a href="contact.html">Lifetime Warranty</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Newsletter & Workshop -->
+        <div>
+          <h4 class="footer-col-title">Workshop Updates</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for seasonal tag drops, pet safety tips, and 15% off your first custom engraving.
+          </p>
+          <form class="footer-newsletter-form"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to PetTags & Co.!');">
+            <div class="footer-input-row">
+              <input type="email" required placeholder="Enter your pet parent email" class="footer-input"
+                aria-label="Email address for newsletter">
+            </div>
+            <button type="submit" class="footer-newsletter-btn">
+              <span>Join Family</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Custom Pet ID Tag &amp; Accessory Engraving Shop. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Shipping &amp; Engraving Guarantee</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Central JavaScript Engine (Zero Inline Scripts) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

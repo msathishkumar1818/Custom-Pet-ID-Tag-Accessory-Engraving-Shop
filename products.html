@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Pet ID Tags by Pet Type | Dogs, Cats &amp; Companions</title>
+  <meta name="description"
+    content="Shop handcrafted and precision laser-engraved ID tags organized by pet species. Heavyweight canine discs, featherweight feline tags, and silent collar attachments.">
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/icons/logo.png">
+
+  <!-- Core External Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Products Page Strictly Even Card & Text Alignment Engine (768px, 1032px & All Responsive) -->
+  <style>
+    /* Desktop & Tablet (768px, 1024px, 1032px+) Strictly Even Heights & Text Alignment */
+    @media (min-width: 768px) {
+      .products-card-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 1.5rem !important;
+        align-items: stretch !important;
+      }
+
+      .pet-product-card {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        height: 100% !important;
+        align-self: stretch !important;
+        border-radius: 1.25rem !important;
+        background-color: var(--bg-surface) !important;
+        box-shadow: var(--shadow-sm) !important;
+      }
+
+      .pet-product-card>div:first-child {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 1 auto !important;
+        width: 100% !important;
+      }
+
+      .pet-product-card>div:first-child>.product-card-body {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 1 auto !important;
+        padding: 1.35rem 1.25rem 0.5rem !important;
+      }
+
+      .pet-product-card h3 {
+        font-size: 1.18rem !important;
+        font-weight: 800 !important;
+        line-height: 1.3 !important;
+        min-height: 3.2rem !important;
+        margin-bottom: 0.45rem !important;
+        display: flex !important;
+        align-items: flex-start !important;
+      }
+
+      .pet-product-card .product-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.55 !important;
+        color: var(--text-muted) !important;
+        min-height: 4.8rem !important;
+        margin-bottom: 1.15rem !important;
+      }
+
+      .pet-product-card .product-feature-list {
+        margin-top: auto !important;
+        padding-top: 0.85rem !important;
+        border-top: 1px solid var(--border-color) !important;
+        margin-bottom: 0.5rem !important;
+        min-height: 4.25rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 0.45rem !important;
+      }
+
+      .pet-product-card>.product-card-body:last-child {
+        margin-top: auto !important;
+        padding: 0.5rem 1.25rem 1.35rem !important;
+        flex: 0 0 auto !important;
+      }
+
+      .pet-product-card>.product-card-body:last-child .btn-primary {
+        width: 100% !important;
+        min-height: 46px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 0.8rem 1rem !important;
+        font-size: 0.92rem !important;
+        font-weight: 700 !important;
+        border-radius: 0.75rem !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Sizing Grid & Cards Strictly Even Heights & Vertical Alignment */
+      .sizing-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 1.5rem !important;
+        align-items: stretch !important;
+      }
+
+      .sizing-card {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        height: 100% !important;
+        align-self: stretch !important;
+        padding: 1.75rem 1.25rem !important;
+        box-sizing: border-box !important;
+        border-radius: 1.25rem !important;
+      }
+
+      .sizing-card>div:first-child {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 1 auto !important;
+        width: 100% !important;
+      }
+
+      /* Fixed 116px vertical zone so all circle stages and H3 titles align identically */
+      .scale-sm {
+        width: 72px !important;
+        height: 72px !important;
+        margin-top: 20px !important;
+        margin-bottom: 24px !important;
+      }
+
+      .scale-md {
+        width: 92px !important;
+        height: 92px !important;
+        margin-top: 10px !important;
+        margin-bottom: 14px !important;
+      }
+
+      .scale-lg {
+        width: 112px !important;
+        height: 112px !important;
+        margin-top: 0 !important;
+        margin-bottom: 4px !important;
+      }
+
+      .sizing-card h3 {
+        font-size: 1.18rem !important;
+        font-weight: 800 !important;
+        line-height: 1.3 !important;
+        min-height: 3.2rem !important;
+        margin-bottom: 0.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+
+      .sizing-card p {
+        font-size: 0.85rem !important;
+        line-height: 1.55 !important;
+        color: var(--text-muted) !important;
+        min-height: 4.8rem !important;
+        margin-bottom: 1.25rem !important;
+        text-align: center !important;
+      }
+
+      .sizing-meta-box {
+        margin-top: auto !important;
+        min-height: 7.5rem !important;
+        padding: 0.85rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 0.35rem !important;
+        border-radius: 0.75rem !important;
+        box-sizing: border-box !important;
+      }
+
+      .sizing-meta-box span {
+        font-size: 0.76rem !important;
+        line-height: 1.35 !important;
+        text-align: center !important;
+      }
+    }
+
+    /* Mobile Fine-Tuning (Under 640px) */
+    @media (max-width: 640px) {
+      .pet-product-card {
+        margin-bottom: 0.5rem !important;
+      }
+
+      .pet-product-card h3 {
+        min-height: auto !important;
+      }
+
+      .pet-product-card .product-desc {
+        min-height: auto !important;
+      }
+
+      .pet-product-card .product-feature-list {
+        min-height: auto !important;
+      }
+
+      .sizing-card h3,
+      .sizing-card p,
+      .sizing-meta-box {
+        min-height: auto !important;
+      }
+
+      .scale-sm,
+      .scale-md,
+      .scale-lg {
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       BRANDED PRELOADER
+       ====================================================================== -->
+  <div id="page-preloader" role="status" aria-live="polite" aria-label="Loading Custom Pet ID Tag Shop">
+    <div class="loader-badge">
+      <div class="loader-spinner"></div>
+      <img src="assets/images/icons/logo.png" alt="Custom Pet ID Tag Shop Logo">
+    </div>
+    <p class="loader-text">Custom Pet Engraving</p>
+  </div>
+
+  <!-- ======================================================================
+       FIXED COMPACT SINGLE-LINE HEADER
+       ====================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+
+      <!-- Brand Identity -->
+      <a href="index.html" class="brand-link" aria-label="Custom Pet ID Tag & Accessory Engraving Shop Home">
+        <div class="brand-logo-wrap">
+          <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-meta">
+          <span class="brand-title">PetTags<span>&amp;Co.</span></span>
+          <span class="brand-subtitle">Modern Tag Lab</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Nav Items -->
+      <nav class="nav-desktop-wrapper" aria-label="Main Navigation">
+        <ul class="nav-desktop">
+
+          <!-- 1. Home with Click-Only Dropdown -->
+          <li class="nav-dropdown-wrapper js-nav-dropdown">
+            <button type="button" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="dropdown-arrow rtl-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-panel" role="menu">
+              <li role="none">
+                <a href="index.html" role="menuitem">
+                  <span>Home 1 (Artisan Studio)</span>
+                  <span class="tag-pill">Classic</span>
+                </a>
+              </li>
+              <li role="none">
+                <a href="home-2.html" role="menuitem">
+                  <span>Home 2 (Modern Tag Lab)</span>
+                  <span class="tag-pill">Modern</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 2. Products (By Pet Type) -->
+          <li>
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+
+          <!-- 3. Design Your Tag -->
+          <li>
+            <a href="design.html" class="nav-link">Design Your Tag</a>
+          </li>
+
+          <!-- 4. About (Mandatory) -->
+          <li>
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <!-- 5. Accessories -->
+          <li>
+            <a href="accessories.html" class="nav-link">Accessories</a>
+          </li>
+
+          <!-- 6. Contact (Directly Visible) -->
+          <li>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Desktop Controls: RTL, Dark Mode, Action CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Button -->
+        <button type="button" class="ctrl-btn js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)"
+          title="Switch RTL/LTR">
+          <svg class="rtl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="rtl-text font-bold text-xs rtl-badge-text">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle Button (#000000 Strict) -->
+        <button type="button" class="ctrl-btn js-dark-toggle" aria-label="Toggle Dark Mode" title="Switch Theme">
+          <!-- Moon Icon for Light Mode -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon for Dark Mode -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- CTA Action Button -->
+        <a href="design.html" class="btn-header-cta" id="header-cta-btn">
+          <span>Design Tag</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" class="rtl-flip">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Drawer Toggle Button -->
+        <button type="button" class="btn-mobile-toggle js-mobile-toggle" aria-label="Open Mobile Menu"
+          aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MOBILE DRAWER NAVIGATION
+       ====================================================================== -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop" tabindex="-1"></div>
+
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <!-- Drawer Header -->
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="drawer-brand-logo">
+        <div>
+          <div class="drawer-brand-name">PetTags&amp;Co.</div>
+          <div class="drawer-brand-sub">Modern Tag Lab</div>
+        </div>
+      </div>
+      <button type="button" class="btn-drawer-close js-drawer-close" aria-label="Close Mobile Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Navigation Links -->
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+
+        <!-- Home Accordion (CLICK ONLY) -->
+        <li class="drawer-accordion js-drawer-accordion">
+          <button type="button" class="drawer-accordion-btn" aria-expanded="false">
+            <span>Home</span>
+            <svg class="drawer-accordion-arrow rtl-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="drawer-accordion-content">
+            <li>
+              <a href="index.html" class="drawer-sublink">
+                <span>Home 1 (Artisan Studio)</span>
+              </a>
+            </li>
+            <li>
+              <a href="home-2.html" class="drawer-sublink">
+                <span>Home 2 (Modern Tag Lab)</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="products.html" class="drawer-nav-link">Products</a></li>
+        <li><a href="design.html" class="drawer-nav-link">Design Your Tag</a></li>
+        <li><a href="about.html" class="drawer-nav-link">About Us</a></li>
+        <li><a href="accessories.html" class="drawer-nav-link">Accessories</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact</a></li>
+
+      </ul>
+    </div>
+
+    <!-- Drawer Footer with Dark Mode and RTL Controls -->
+    <div class="drawer-footer">
+      <div class="drawer-ctrls">
+        <button type="button" class="drawer-ctrl-item js-dark-toggle" aria-label="Toggle Dark Mode">
+          <svg class="icon-moon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span>Dark Mode</span>
+        </button>
+
+        <button type="button" class="drawer-ctrl-item js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" style="width:16px;height:16px;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="rtl-text font-bold">RTL</span>
+          <span>Switch</span>
+        </button>
+      </div>
+
+      <a href="design.html" class="btn-header-cta drawer-cta-full">
+        <span>Start Customizing</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" class="rtl-flip">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MAIN CONTENT: PRODUCTS PAGE — EXACTLY 5 SECTIONS
+       ====================================================================== -->
+  <main id="main-content">
+
+    <!-- ------------------------------------------------------------------
+         SECTION 1: SPECIES FILTER & CATALOG HERO (Background Image with Centered Overlay)
+         ------------------------------------------------------------------ -->
+    <section class="products-hero-section" id="products-hero-section" aria-labelledby="products-heading">
+      <!-- Background Image Layer -->
+      <div class="products-hero-bg">
+        <img src="assets/images/products/products-hero-pets.jpg"
+          alt="Two happy dogs wearing custom engraved tags running together" loading="eager" width="1920" height="1080">
+      </div>
+      <div class="products-hero-overlay"></div>
+
+      <div class="container-custom">
+        <div class="products-hero-center-wrap">
+
+          <div class="hero-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            <span>100% Solid Stainless &amp; Marine Brass</span>
+          </div>
+
+          <h1 id="products-heading" class="hero-title">
+            Engraved Pet ID Tags, <span class="highlight-amber">By Pet Type</span>.
+          </h1>
+
+          <p class="hero-desc">
+            Every pet species requires calibrated weight, ring thickness, and silencer fittings. Browse our canine,
+            feline, and adventure companions catalogs.
+          </p>
+
+          <!-- Interactive Filter Navigation (Centered Glass Bar) -->
+          <div class="species-filter-nav" role="tablist" aria-label="Filter Tags by Pet Type">
+            <a href="#canine-collection-section" class="filter-btn active" role="tab">
+              <span>Dog Collections</span>
+              <span class="filter-count">8 Shapes</span>
+            </a>
+            <a href="#feline-collection-section" class="filter-btn" role="tab">
+              <span>Cat Collections</span>
+              <span class="filter-count">6 Shapes</span>
+            </a>
+            <a href="#sizing-matrix-section" class="filter-btn" role="tab">
+              <span>Size Guide</span>
+              <span class="filter-count">Matrix</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 2: CANINE COLLECTION (Even 3-Card Product Grid)
+         ------------------------------------------------------------------ -->
+    <section class="collection-section" id="canine-collection-section" aria-labelledby="canine-heading">
+      <div class="container-custom">
+
+        <div class="section-head">
+          <span class="section-eyebrow">Heavy-Duty Canine Series</span>
+          <h2 id="canine-heading" class="section-title">Built for Lake Swims, Mud &amp; Forest Trails</h2>
+          <p class="section-subtitle">
+            Machined from solid 3mm billets to prevent bending under heavy collar pulling or rough playground wrestling.
+          </p>
+        </div>
+
+        <div class="products-card-grid">
+
+          <!-- Canine Card 1 -->
+          <article class="pet-product-card">
+            <div>
+              <div class="product-img-wrap">
+                <img src="assets/images/products/p23.jpg" alt="Rugged Trail Disc dog tag" loading="lazy" width="800"
+                  height="550">
+                <span class="product-badge-pill">Best for Active Dogs</span>
+                <span class="product-price-badge">$24.00</span>
+              </div>
+              <div class="product-card-body">
+                <h3>The Rugged Trail Disc</h3>
+                <p class="product-desc">Classic round silhouette with dual-sided deep fiber laser burn. Rated for 45 lbs
+                  pull strength.</p>
+                <ul class="product-feature-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Diameter: 28mm &bull; Solid 316L Steel</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Fits up to 4 lines of contact info</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <a href="design.html?product=trail-disc" class="btn-primary btn-primary-full">
+                <span>Customize Disc Tag</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Canine Card 2 -->
+          <article class="pet-product-card">
+            <div>
+              <div class="product-img-wrap">
+                <img src="assets/images/products/p24.jpg" alt="Forest Mountain Shield dog tag" loading="lazy"
+                  width="800" height="550">
+                <span class="product-badge-pill">Field Tested</span>
+                <span class="product-price-badge">$26.00</span>
+              </div>
+              <div class="product-card-body">
+                <h3>The Mountain Crest Shield</h3>
+                <p class="product-desc">Tactical shield profile with reinforced top eyelet. Deep contrast silver laser
+                  on dark metal.</p>
+                <ul class="product-feature-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Dimensions: 32x26mm &bull; Naval Brass</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Fits pet name + microchip + 2 phones</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <a href="design.html?product=mountain-shield" class="btn-primary btn-primary-full">
+                <span>Customize Shield </span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Canine Card 3 -->
+          <article class="pet-product-card">
+            <div>
+              <div class="product-img-wrap">
+                <img src="assets/images/products/p25.jpg" alt="Hexagon Agility dog tag" loading="lazy" width="800"
+                  height="550">
+                <span class="product-badge-pill">Modern Geometric</span>
+                <span class="product-price-badge">$25.00</span>
+              </div>
+              <div class="product-card-body">
+                <h3>The Hexagon Agility Tag</h3>
+                <p class="product-desc">Contemporary six-faceted profile with high-speed diamond-beveled edges to
+                  protect fur.</p>
+                <ul class="product-feature-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Diameter: 26mm &bull; PVD Midnight Black</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>100% Rust-proof in ocean saltwater</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <a href="design.html?product=hexagon-agility" class="btn-primary btn-primary-full">
+                <span>Customize Hexagon</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 3: FELINE & SMALL PET COLLECTION (Even 3-Card Grid)
+         ------------------------------------------------------------------ -->
+    <section class="collection-section alt-bg" id="feline-collection-section" aria-labelledby="feline-heading">
+      <div class="container-custom">
+
+        <div class="section-head">
+          <span class="section-eyebrow">Featherweight Series</span>
+          <h2 id="feline-heading" class="section-title">Ultralight Tags for Feline Independence</h2>
+          <p class="section-subtitle">
+            Sub-8 gram tags designed never to dip into food bowls, get stuck in furniture, or jingle annoyingly at 3 AM.
+          </p>
+        </div>
+
+        <div class="products-card-grid">
+
+          <!-- Feline Card 1 -->
+          <article class="pet-product-card">
+            <div>
+              <div class="product-img-wrap">
+                <img src="assets/images/products/p26.jpg" alt="Featherweight Moon cat tag" loading="lazy" width="800"
+                  height="550">
+                <span class="product-badge-pill">Ultralight 6g</span>
+                <span class="product-price-badge">$22.00</span>
+              </div>
+              <div class="product-card-body">
+                <h3>The Crescent Moon Tag</h3>
+                <p class="product-desc">Curved crescent contour tailored for curious indoor cats. Curved edges prevent
+                  fur friction.</p>
+                <ul class="product-feature-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Diameter: 18mm &bull; Mirror Polished Brass</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>High legibility micro-engraved font</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <a href="design.html?product=crescent-moon" class="btn-primary btn-primary-full">
+                <span>Customize Moon </span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Feline Card 2 -->
+          <article class="pet-product-card">
+            <div>
+              <div class="product-img-wrap">
+                <img src="assets/images/products/p27.jpg" alt="Silent Collar Mount tag" loading="lazy" width="800"
+                  height="550">
+                <span class="product-badge-pill">100% Silent</span>
+                <span class="product-price-badge">$24.00</span>
+              </div>
+              <div class="product-card-body">
+                <h3>The Collar Slide Slider</h3>
+                <p class="product-desc">Direct slide-on plate with zero dangling rings. Perfectly flush with webbing
+                  collars.</p>
+                <ul class="product-feature-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Fits 3/8&quot; and 5/8&quot; collar webbing</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Zero snagging on twigs or branches</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <a href="design.html?product=collar-slider" class="btn-primary btn-primary-full">
+                <span>Customize Slider</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Feline Card 3 -->
+          <article class="pet-product-card">
+            <div>
+              <div class="product-img-wrap">
+                <img src="assets/images/products/p28.jpg" alt="Micro Petite Round tag for kittens" loading="lazy"
+                  width="800" height="550">
+                <span class="product-badge-pill">Kittens &amp; Pups</span>
+                <span class="product-price-badge">$20.00</span>
+              </div>
+              <div class="product-card-body">
+                <h3>The Micro Petite Round</h3>
+                <p class="product-desc">Our smallest engineered blank. Fits two emergency phone numbers with absolute
+                  clarity.</p>
+                <ul class="product-feature-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Diameter: 15mm &bull; Weight: 4.5g</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Includes light-gauge mini split ring</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <a href="design.html?product=micro-round" class="btn-primary btn-primary-full">
+                <span>Customize Micro </span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 4: SIZING & COLLAR GAUGE VISUAL MATRIX (Comparative Scale)
+         ------------------------------------------------------------------ -->
+    <section class="sizing-matrix-section" id="sizing-matrix-section" aria-labelledby="sizing-heading">
+      <div class="container-custom">
+
+        <div class="section-head">
+          <span class="section-eyebrow">Exact Proportions</span>
+          <h2 id="sizing-heading" class="section-title">Size Guide &amp; Ring Thickness Matrix</h2>
+          <p class="section-subtitle">
+            Match your pet's neck girth, weight, and leash habits to the ideal diameter and split-ring gauge.
+          </p>
+        </div>
+
+        <div class="sizing-grid">
+
+          <!-- Small Card -->
+          <article class="sizing-card">
+            <div>
+              <div class="sizing-scale-circle scale-sm">20mm</div>
+              <h3>Small &bull; 0–20 lbs</h3>
+              <p>Ideal for cats, puppies, Chihuahuas, Dachshunds, and toy breeds.</p>
+            </div>
+            <div class="sizing-meta-box">
+              <span>Thickness: 2.5mm solid alloy</span>
+              <span>Ring Gauge: 1.2mm tempered steel</span>
+              <span>Max Characters: 45 across 3 lines</span>
+            </div>
+          </article>
+
+          <!-- Medium Card -->
+          <article class="sizing-card">
+            <div>
+              <div class="sizing-scale-circle scale-md">26mm</div>
+              <h3>Medium &bull; 20–55 lbs</h3>
+              <p>Ideal for French Bulldogs, Beagles, Corgis, Australian Shepherds, and Border Collies.</p>
+            </div>
+            <div class="sizing-meta-box">
+              <span>Thickness: 3.0mm solid alloy</span>
+              <span>Ring Gauge: 1.6mm reinforced steel</span>
+              <span>Max Characters: 70 across 4 lines</span>
+            </div>
+          </article>
+
+          <!-- Large Card -->
+          <article class="sizing-card">
+            <div>
+              <div class="sizing-scale-circle scale-lg">32mm</div>
+              <h3>Large &bull; 55+ lbs</h3>
+              <p>Ideal for Golden Retrievers, Labradors, German Shepherds, Huskies, and Great Danes.</p>
+            </div>
+            <div class="sizing-meta-box">
+              <span>Thickness: 3.2mm heavyweight alloy</span>
+              <span>Ring Gauge: 2.0mm heavy coil pull</span>
+              <span>Max Characters: 95 across 5 lines</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 5: FINAL ORDER & BULK CUSTOMIZATION CTA (Last Section)
+         ------------------------------------------------------------------ -->
+    <section class="products-cta-section" id="products-cta-section" aria-labelledby="prod-cta-heading">
+      <div class="products-cta-bg">
+        <img src="assets/images/sections/products-cta-banner.jpg"
+          alt="Dog and cat cuddle together wearing matching custom tags" loading="lazy" width="1200" height="600">
+      </div>
+      <div class="products-cta-overlay"></div>
+
+      <div class="container-custom">
+        <div class="products-cta-content">
+          <div class="hero-pill hero-pill-glow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+            <span>Multi-Pet Discounts Available</span>
+          </div>
+
+          <h2 id="prod-cta-heading" class="final-cta-title">
+            Protect All Your Pets with Matching Laser Precision.
+          </h2>
+
+          <p class="final-cta-desc">
+            Order two or more custom tags and receive automatic 15% bundle savings, complimentary stainless silencer
+            bumpers, and free expedited shipping.
+          </p>
+
+          <div class="final-cta-actions">
+            <a href="design.html" class="btn-cta-white">
+              <span>Open Tag Studio Customizer</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-sm rtl-flip">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="contact.html" class="btn-secondary btn-secondary-glass">
+              <span>Enquire For Shelters &amp; Vets</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       SCROLL TO TOP BUTTON
+       ====================================================================== -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top of page" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ======================================================================
+       SHARED FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-top-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand-wrap">
+          <div class="footer-brand">
+            <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="footer-logo">
+            <div class="footer-brand-text">
+              <h3>PetTags<span>&amp;Co.</span></h3>
+              <p>Modern Tag Lab</p>
+            </div>
+          </div>
+          <p class="footer-bio">
+            Crafting premium, deep-laser-engraved ID tags and luxury accessories to keep your beloved pets safe,
+            stylish, and adventure-ready.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-dot"></span>
+            <span>Atelier Status: OPEN / Live Engraving</span>
+          </div>
+          <div class="footer-social-wrap">
+            <span class="footer-social-title">Follow Our Atelier</span>
+            <div class="footer-socials">
+              <a href="#" class="footer-social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                  </path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Pinterest">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="12" y1="8" x2="12" y2="16"></line>
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 12a4 4 0 0 1 8 0c0 2.21-1.79 4-4 4"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 1: Shop Collections -->
+        <div>
+          <h4 class="footer-col-title">Shop Collections</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="products.html">Dog ID Tags</a></li>
+            <li class="footer-link-item"><a href="products.html">Cat ID Tags</a></li>
+            <li class="footer-link-item"><a href="products.html">Brass &amp; Stainless Tags</a></li>
+            <li class="footer-link-item"><a href="accessories.html">Collar Mount Tags</a></li>
+            <li class="footer-link-item"><a href="accessories.html">Silencers &amp; Split Rings</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Navigation & Company -->
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="about.html">About Our Craft</a></li>
+            <li class="footer-link-item"><a href="design.html">Tag Customizer Studio</a></li>
+            <li class="footer-link-item"><a href="contact.html">Customer Support</a></li>
+            <li class="footer-link-item"><a href="contact.html">Bulk / Vet Orders</a></li>
+            <li class="footer-link-item"><a href="contact.html">Lifetime Warranty</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Newsletter & Workshop -->
+        <div>
+          <h4 class="footer-col-title">Workshop Updates</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for seasonal tag drops, pet safety tips, and 15% off your first custom engraving.
+          </p>
+          <form class="footer-newsletter-form"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to PetTags & Co.!');">
+            <div class="footer-input-row">
+              <input type="email" required placeholder="Enter your pet parent email" class="footer-input"
+                aria-label="Email address for newsletter">
+            </div>
+            <button type="submit" class="footer-newsletter-btn">
+              <span>Join Family</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Custom Pet ID Tag &amp; Accessory Engraving Shop. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Shipping &amp; Engraving Guarantee</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Central JavaScript Engine (Zero Inline Scripts) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
