@@ -219,8 +219,19 @@
     --header-height: 3.85rem;
   }
 
+  .brand-meta {
+    gap: 0.15rem;
+  }
+
   .brand-subtitle {
-    display: none;
+    display: block;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    line-height: 1.15;
+    white-space: nowrap;
   }
 
   .brand-logo-wrap {
@@ -328,6 +339,10 @@
 
   .brand-title {
     font-size: 0.85rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.58rem;
   }
 
   .brand-logo-wrap {
