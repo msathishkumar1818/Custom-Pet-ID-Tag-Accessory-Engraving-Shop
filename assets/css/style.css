@@ -752,7 +752,7 @@ html.dark .btn-mobile-toggle {
 .drawer-brand {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
 .drawer-brand-logo {
@@ -761,6 +761,15 @@ html.dark .btn-mobile-toggle {
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.drawer-brand > div,
+.drawer-brand-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  justify-content: center;
 }
 
 .drawer-brand-name {
@@ -768,13 +777,22 @@ html.dark .btn-mobile-toggle {
   font-size: 0.95rem;
   font-weight: 800;
   color: var(--text-main);
-  line-height: 1.1;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.drawer-brand-name span {
+  color: var(--color-accent);
 }
 
 .drawer-brand-sub {
   font-size: 0.65rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--text-light);
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .btn-drawer-close {
@@ -2592,15 +2610,15 @@ html.dark .collector-tag-meta {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.4rem 1rem;
+  padding: 0.35rem 0.95rem;
   border-radius: 9999px;
   background: rgba(15, 23, 42, 0.9);
   color: #38bdf8;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   border: 1px solid rgba(56, 189, 248, 0.4);
   backdrop-filter: blur(8px);
 }
@@ -2612,13 +2630,16 @@ html.dark .lab-badge {
 }
 
 .hero-modern-title {
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(1.75rem, 3.2vw, 2.65rem);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.2;
   color: #ffffff;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
   text-align: center;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-modern-title span {
@@ -2626,11 +2647,11 @@ html.dark .lab-badge {
 }
 
 .hero-modern-desc {
-  font-size: 1.15rem;
-  line-height: 1.65;
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  line-height: 1.55;
   color: #cbd5e1;
-  margin-bottom: 2.25rem;
-  max-width: 44rem;
+  margin-bottom: 1.75rem;
+  max-width: 42rem;
   text-align: center;
 }
 
