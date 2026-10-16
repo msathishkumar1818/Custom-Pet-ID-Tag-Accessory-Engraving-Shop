@@ -301,6 +301,8 @@ html.dark .brand-logo-wrap {
 .brand-meta {
   display: flex;
   flex-direction: column;
+  gap: 0.35rem;
+  justify-content: center;
 }
 
 .brand-title {
@@ -323,6 +325,7 @@ html.dark .brand-logo-wrap {
   text-transform: uppercase;
   color: var(--text-light);
   white-space: nowrap;
+  line-height: 1.2;
 }
 
 /* Desktop Navigation (Exactly 6 Nav Items) */
@@ -1084,21 +1087,29 @@ html:not(.dark) .site-footer {
   flex-shrink: 0;
 }
 
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
 .footer-brand-text h3 {
+  font-family: var(--font-heading);
   color: #ffffff;
   font-size: 1.15rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .footer-brand-text h3 span {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .footer-brand-text p {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: #94a3b8;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1.2;
