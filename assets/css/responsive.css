@@ -11,8 +11,28 @@
   }
 }
 
-/* Ensure mobile drawer & backdrop can NEVER display on desktop (> 1024px) */
-@media (min-width: 1025px) {
+/* Mobile Drawer & Backdrop: Strict State Management */
+.mobile-drawer.is-open,
+[dir="rtl"] .mobile-drawer.is-open,
+#mobile-drawer.is-open,
+[dir="rtl"] #mobile-drawer.is-open {
+  transform: translateX(0) !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.mobile-drawer-backdrop.is-open,
+#mobile-drawer-backdrop.is-open {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure mobile drawer is never displayed on large desktop (> 1366px) */
+@media (min-width: 1367px) {
   .mobile-drawer,
   .mobile-drawer-backdrop,
   #mobile-drawer,
@@ -21,12 +41,6 @@
     visibility: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
-    transform: translateX(100%) !important;
-  }
-
-  [dir="rtl"] .mobile-drawer,
-  [dir="rtl"] #mobile-drawer {
-    transform: translateX(-100%) !important;
   }
 }
 
@@ -63,11 +77,12 @@
 .accessories-hero-section,
 .contact-hero-section {
   min-height: clamp(520px, 58vh, 600px) !important;
+  height: clamp(520px, 58vh, 600px) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   box-sizing: border-box !important;
-  padding: 4.5rem 0 !important;
+  padding: 3.25rem 0 !important;
   position: relative !important;
   overflow: hidden !important;
 }
@@ -82,9 +97,31 @@
   z-index: 3 !important;
 }
 
-/* iPad Pro (11-inch & 12.9-inch in Landscape / Touch Tablets up to 1366px)
+/* Constrain split-layout hero visuals so they fit within the identical 520px-600px height */
+@media (min-width: 1025px) {
+  .accessories-hero-center-wrap,
+  .contact-hero-center-wrap,
+  .accessories-hero-grid,
+  .contact-hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .about-hero-header {
+    margin: 0 auto 1.25rem !important;
+  }
+
+  .about-telemetry-strip {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* iPad Pro (11-inch & 12.9-inch in Portrait & Landscape up to 1366px)
    Strictly ONLY the Menu Button in Header */
-@media only screen and (min-width: 1025px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (pointer: coarse) {
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
   .nav-desktop {
     display: none !important;
   }
@@ -213,8 +250,16 @@
   .about-hero-section,
   .accessories-hero-section,
   .contact-hero-section {
-    min-height: 480px !important;
-    padding: 3rem 0 !important;
+    min-height: calc(100vh - var(--header-height)) !important;
+    min-height: calc(100dvh - var(--header-height)) !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 2.25rem 0 !important;
+    position: relative !important;
+    overflow: visible !important;
   }
 
   #scroll-to-top {
@@ -1091,8 +1136,10 @@
     padding: 1.5rem;
   }
   .contact-support-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 26rem;
+    margin: 0 auto;
   }
   .contact-map-frame-wrap,
   .contact-map-frame-wrap iframe {
@@ -1302,6 +1349,72 @@
     color: #cbd5e1;
     max-width: 32rem;
     padding: 0 0.75rem;
+  }
+
+  /* -------------------------------------------------------------------------
+     1B. DESIGN HERO & CTA BUTTONS (ONE BY ONE ON MOBILE: 360, 375, 393, 440)
+     ------------------------------------------------------------------------- */
+  .design-hero-section {
+    padding: 2.25rem 0 !important;
+  }
+
+  .design-hero-center-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 0.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .design-hero-center-wrap .hero-pill {
+    font-size: 0.78rem !important;
+    padding: 0.35rem 0.85rem !important;
+    margin-bottom: 0.85rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .design-hero-center-wrap .hero-title {
+    font-size: clamp(1.65rem, 5.8vw, 2.1rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.75rem !important;
+    letter-spacing: -0.015em !important;
+    text-align: center !important;
+    padding: 0 0.25rem !important;
+  }
+
+  .design-hero-center-wrap .hero-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.5rem !important;
+    color: #cbd5e1 !important;
+    max-width: 30rem !important;
+    padding: 0 0.5rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .design-hero-center-wrap .hero-btn-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 20rem !important;
+    margin: 0 auto !important;
+    gap: 0.75rem !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .design-hero-center-wrap .hero-btn-group a,
+  .design-hero-center-wrap .hero-btn-group .btn {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0.85rem 1.25rem !important;
+    font-size: 0.95rem !important;
+    border-radius: 0.75rem !important;
   }
 
   /* Segmented Filter Card on Mobile (No Distorted Oval) */
@@ -1520,6 +1633,55 @@
     width: 100% !important;
     max-width: 240px !important;
     margin: 0.75rem auto 0 !important;
+  }
+
+  /* Contact Us Atelier Support Hubs -> ONE BY ONE (360, 375, 393, 440) */
+  .contact-support-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+  }
+
+  .support-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .support-card-img-wrap {
+    height: 220px !important;
+    width: 100% !important;
+  }
+
+  .support-card-img-wrap img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .support-card-body {
+    padding: 1.35rem 1.25rem 1.25rem !important;
+  }
+
+  .support-title {
+    font-size: 1.22rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .support-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    min-height: auto !important;
+    margin-bottom: 1.15rem !important;
+  }
+
+  .btn-support-action {
+    width: 100% !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.88rem !important;
+    border-radius: 0.75rem !important;
   }
 
   /* About Us Metallurgy Bench Cards -> ONE BY ONE (360, 375, 412, 427, 440) */
@@ -1875,6 +2037,24 @@
   .about-pledge-body {
     padding: 1.25rem 1.15rem !important;
   }
+
+  /* Contact Support Cards 440px */
+  .contact-support-grid {
+    max-width: 100% !important;
+    gap: 1.35rem !important;
+  }
+
+  .support-card-img-wrap {
+    height: 200px !important;
+  }
+
+  .support-title {
+    font-size: 1.15rem !important;
+  }
+
+  .support-desc {
+    font-size: 0.88rem !important;
+  }
 }
 
 /* 393px / 375px Viewports (iPhone 14/15/16 Standard, iPhone SE, iPhone 12/13 mini) */
@@ -1902,6 +2082,40 @@
     line-height: 1.5;
     margin-bottom: 1.35rem;
     padding: 0 0.35rem;
+  }
+
+  /* Design Hero Mobile 393px / 375px */
+  .design-hero-section {
+    padding: 2rem 0 !important;
+  }
+
+  .design-hero-center-wrap .hero-pill {
+    font-size: 0.74rem !important;
+    padding: 0.32rem 0.8rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .design-hero-center-wrap .hero-title {
+    font-size: 1.65rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  .design-hero-center-wrap .hero-desc {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .design-hero-center-wrap .hero-btn-group {
+    max-width: 100% !important;
+    gap: 0.65rem !important;
+  }
+
+  .design-hero-center-wrap .hero-btn-group a,
+  .design-hero-center-wrap .hero-btn-group .btn {
+    padding: 0.8rem 1rem !important;
+    font-size: 0.9rem !important;
   }
 
   .species-filter-nav {
@@ -2012,6 +2226,27 @@
   .about-spec-col-val {
     font-size: 0.78rem !important;
   }
+
+  /* Contact Support Cards 393px / 375px */
+  .contact-support-grid {
+    gap: 1.25rem !important;
+  }
+
+  .support-card-img-wrap {
+    height: 185px !important;
+  }
+
+  .support-card-body {
+    padding: 1.15rem 1rem !important;
+  }
+
+  .support-title {
+    font-size: 1.1rem !important;
+  }
+
+  .support-desc {
+    font-size: 0.85rem !important;
+  }
 }
 
 /* 360px Viewports (Samsung Galaxy S / Android compact baseline) */
@@ -2038,6 +2273,37 @@
     line-height: 1.48;
     margin-bottom: 1.25rem;
     padding: 0 0.15rem;
+  }
+
+  /* Design Hero Mobile 360px */
+  .design-hero-section {
+    padding: 1.75rem 0 !important;
+  }
+
+  .design-hero-center-wrap .hero-pill {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.7rem !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  .design-hero-center-wrap .hero-title {
+    font-size: 1.5rem !important;
+    line-height: 1.22 !important;
+    margin-bottom: 0.6rem !important;
+    padding: 0 !important;
+  }
+
+  .design-hero-center-wrap .hero-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.42 !important;
+    margin-bottom: 1.15rem !important;
+    padding: 0 !important;
+  }
+
+  .design-hero-center-wrap .hero-btn-group a,
+  .design-hero-center-wrap .hero-btn-group .btn {
+    padding: 0.75rem 0.9rem !important;
+    font-size: 0.88rem !important;
   }
 
   .species-filter-nav {
@@ -2157,6 +2423,29 @@
 
   .about-foot-link span {
     font-size: 0.72rem !important;
+  }
+
+  /* Contact Support Cards 360px */
+  .contact-support-grid {
+    gap: 1.15rem !important;
+  }
+
+  .support-card-img-wrap {
+    height: 175px !important;
+  }
+
+  .support-title {
+    font-size: 1.05rem !important;
+  }
+
+  .support-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .btn-support-action {
+    padding: 0.65rem 0.85rem !important;
+    font-size: 0.82rem !important;
   }
 }
 

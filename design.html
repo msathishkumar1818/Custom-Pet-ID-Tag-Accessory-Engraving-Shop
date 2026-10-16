@@ -30,7 +30,7 @@
       align-self: stretch !important;
     }
 
-    .font-card > div:first-child {
+    .font-card>div:first-child {
       display: flex !important;
       flex-direction: column !important;
       flex: 1 1 auto !important;
@@ -213,6 +213,7 @@
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 1.25rem !important;
       }
+
       .hardware-grid {
         grid-template-columns: repeat(2, 1fr) !important;
       }
@@ -223,16 +224,20 @@
       .control-grid-pair {
         grid-template-columns: 1fr !important;
       }
+
       .fonts-grid {
         grid-template-columns: 1fr !important;
       }
+
       .symbols-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.85rem !important;
       }
+
       .hardware-grid {
         grid-template-columns: 1fr !important;
       }
+
       .font-card h3,
       .font-card p,
       .symbol-badge-item h4,
@@ -335,12 +340,6 @@
         <!-- RTL/LTR Button -->
         <button type="button" class="ctrl-btn js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)"
           title="Switch RTL/LTR">
-          <svg class="rtl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
           <span class="rtl-text font-bold text-xs rtl-badge-text">RTL</span>
         </button>
 
@@ -475,11 +474,6 @@
         </button>
 
         <button type="button" class="drawer-ctrl-item js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
           <span class="rtl-text font-bold">RTL</span>
           <span>Switch</span>
         </button>
@@ -547,29 +541,7 @@
             </a>
           </div>
 
-          <div class="design-hero-badges-row">
-            <span class="design-hero-chip">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-xs">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-              <span>3.0mm Solid Blanks</span>
-            </span>
-            <span class="design-hero-chip">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-xs">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-              <span>0.4mm Deep Laser Burn</span>
-            </span>
-            <span class="design-hero-chip">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-xs">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-              <span>Lifetime Legibility Guarantee</span>
-            </span>
-          </div>
+
 
         </div>
       </div>

@@ -70,6 +70,7 @@
   darkToggleBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       const currentlyDark = htmlEl.classList.contains('dark');
       applyTheme(!currentlyDark);
     });
@@ -104,6 +105,8 @@
   rtlToggleBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
+      closeMobileMenu();
       const currentDir = htmlEl.getAttribute('dir') || 'ltr';
       applyDirection(currentDir === 'rtl' ? 'ltr' : 'rtl');
     });
@@ -232,9 +235,9 @@
     });
   });
 
-  // Automatically close mobile menu and unlock body scroll if resized to desktop (> 1024px)
+  // Automatically close mobile menu and unlock body scroll if resized to large desktop (> 1366px)
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1366) {
       closeMobileMenu();
     }
   }, { passive: true });

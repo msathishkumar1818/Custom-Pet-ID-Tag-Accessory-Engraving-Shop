@@ -29,17 +29,62 @@
 
   <!-- Mobile Text Alignment & Grid Layout Engine (Scoped for 360px, 375px, 393px, 412px, 427px, 440px) -->
   <style>
+    /* Hero Section: Centered Minimalist Presentation */
+    .contact-hero-center-wrap {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      width: 100% !important;
+      max-width: 1040px !important;
+      margin: 0 auto !important;
+    }
+
+    .contact-eyebrow {
+      margin: 0 auto 1.15rem auto !important;
+    }
+
+    .contact-hero-title {
+      text-align: center !important;
+      margin: 0 auto 0.85rem auto !important;
+    }
+
+    .contact-hero-desc {
+      text-align: center !important;
+      margin: 0 auto 1.75rem auto !important;
+      max-width: 44rem !important;
+    }
+
+    .contact-channels-list {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 1.15rem !important;
+      width: 100% !important;
+      max-width: 1040px !important;
+      margin: 0 auto !important;
+    }
+
+    @media (max-width: 992px) {
+      .contact-channels-list {
+        grid-template-columns: 1fr !important;
+        max-width: 32rem !important;
+        margin: 0 auto !important;
+      }
+    }
+
     @media (max-width: 768px) {
       .contact-hero-section {
         padding: 3.25rem 0 2.5rem !important;
         overflow-x: clip !important;
         max-width: 100vw !important;
       }
+
       .contact-hero-content {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
       }
+
       .contact-hero-title {
         font-size: clamp(1.65rem, 5vw, 2.2rem) !important;
         line-height: 1.2 !important;
@@ -47,6 +92,7 @@
         word-break: break-word !important;
         margin-bottom: 0.85rem !important;
       }
+
       .contact-hero-desc {
         font-size: 0.92rem !important;
         line-height: 1.55 !important;
@@ -56,6 +102,7 @@
         word-break: normal !important;
         overflow-wrap: break-word !important;
       }
+
       .contact-channels-list {
         display: flex !important;
         flex-direction: column !important;
@@ -63,6 +110,7 @@
         width: 100% !important;
         max-width: 32rem !important;
       }
+
       .contact-channel-item {
         display: grid !important;
         grid-template-columns: 2.6rem 1fr !important;
@@ -77,6 +125,7 @@
         width: 100% !important;
         max-width: 32rem !important;
       }
+
       .contact-channel-icon {
         grid-row: 1 / span 2 !important;
         align-self: center !important;
@@ -86,11 +135,13 @@
         font-size: 1.05rem !important;
         flex-shrink: 0 !important;
       }
+
       .contact-channel-info {
         grid-column: 2 !important;
         min-width: 0 !important;
         width: 100% !important;
       }
+
       .contact-channel-title {
         font-size: 0.7rem !important;
         font-weight: 700 !important;
@@ -101,6 +152,7 @@
         margin-bottom: 0.2rem !important;
         display: block !important;
       }
+
       .contact-channel-val {
         font-size: 0.92rem !important;
         font-weight: 800 !important;
@@ -110,6 +162,7 @@
         word-break: break-word !important;
         overflow-wrap: anywhere !important;
       }
+
       .contact-channel-badge {
         grid-column: 2 !important;
         width: fit-content !important;
@@ -122,6 +175,7 @@
         border-radius: 9999px !important;
         margin-top: 0.25rem !important;
       }
+
       .contact-map-info-card {
         padding: 1.25rem 1rem !important;
         border-radius: 1.25rem !important;
@@ -129,12 +183,14 @@
         width: 100% !important;
         box-sizing: border-box !important;
       }
+
       .map-info-item {
         display: flex !important;
         align-items: flex-start !important;
         gap: 0.75rem !important;
         width: 100% !important;
       }
+
       .map-info-icon {
         width: 2.4rem !important;
         height: 2.4rem !important;
@@ -142,28 +198,33 @@
         font-size: 1.05rem !important;
         flex-shrink: 0 !important;
       }
+
       .map-info-body {
         flex: 1 !important;
         min-width: 0 !important;
       }
+
       .map-info-lbl {
         font-size: 0.68rem !important;
         font-weight: 800 !important;
         letter-spacing: 0.06em !important;
         margin-bottom: 0.2rem !important;
       }
+
       .map-info-title {
         font-size: 1.05rem !important;
         font-weight: 800 !important;
         line-height: 1.3 !important;
         margin-bottom: 0.35rem !important;
       }
+
       .map-info-val {
         font-size: 0.85rem !important;
         line-height: 1.45 !important;
         color: var(--text-muted) !important;
         word-break: break-word !important;
       }
+
       .map-hours-list {
         margin-top: 0.5rem !important;
         display: flex !important;
@@ -171,6 +232,7 @@
         gap: 0.45rem !important;
         width: 100% !important;
       }
+
       .map-hours-list li {
         display: flex !important;
         justify-content: space-between !important;
@@ -181,9 +243,11 @@
         width: 100% !important;
         box-sizing: border-box !important;
       }
+
       .map-hours-list li:last-child {
         border-bottom: none !important;
       }
+
       .map-hours-list li span {
         font-size: 0.82rem !important;
         font-weight: 600 !important;
@@ -191,6 +255,7 @@
         white-space: nowrap !important;
         flex-shrink: 0 !important;
       }
+
       .map-hours-list li strong {
         font-size: 0.82rem !important;
         font-weight: 700 !important;
@@ -198,6 +263,7 @@
         white-space: nowrap !important;
         text-align: right !important;
       }
+
       .map-hours-list li em {
         font-size: 0.76rem !important;
         font-weight: 700 !important;
@@ -206,6 +272,7 @@
         text-align: right !important;
         line-height: 1.25 !important;
       }
+
       .map-pet-friendly-badge {
         padding: 0.75rem 0.85rem !important;
         gap: 0.65rem !important;
@@ -213,6 +280,7 @@
         line-height: 1.4 !important;
         border-radius: 0.85rem !important;
       }
+
       .btn-map-nav {
         width: 100% !important;
         justify-content: center !important;
@@ -221,21 +289,95 @@
       }
     }
 
+    /* Atelier Support Hubs: ONE BY ONE ON MOBILE (360, 375, 440 up to 640px) */
+    @media (max-width: 640px) {
+      .contact-support-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        max-width: 440px !important;
+        margin: 0 auto !important;
+      }
+
+      .support-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+      }
+
+      .support-card-img-wrap {
+        height: 220px !important;
+        width: 100% !important;
+      }
+
+      .support-card-img-wrap img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+      }
+
+      .support-card-body {
+        padding: 1.35rem 1.25rem 1.25rem !important;
+      }
+
+      .support-title {
+        font-size: 1.22rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.5rem !important;
+      }
+
+      .support-desc {
+        font-size: 0.9rem !important;
+        line-height: 1.55 !important;
+        min-height: auto !important;
+        margin-bottom: 1.15rem !important;
+      }
+
+      .btn-support-action {
+        width: 100% !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 0.88rem !important;
+        border-radius: 0.75rem !important;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .contact-support-grid {
+        max-width: 100% !important;
+        gap: 1.35rem !important;
+      }
+
+      .support-card-img-wrap {
+        height: 200px !important;
+      }
+
+      .support-title {
+        font-size: 1.15rem !important;
+      }
+
+      .support-desc {
+        font-size: 0.88rem !important;
+      }
+    }
+
     @media (max-width: 480px) {
       .contact-channel-item {
         padding: 0.85rem 0.75rem !important;
         column-gap: 0.75rem !important;
       }
+
       .contact-channel-val {
         font-size: 0.88rem !important;
       }
+
       .contact-map-info-card {
         padding: 1.15rem 0.85rem !important;
       }
+
       .map-hours-list li span,
       .map-hours-list li strong {
         font-size: 0.8rem !important;
       }
+
       .map-hours-list li em {
         font-size: 0.74rem !important;
       }
@@ -245,18 +387,43 @@
       .contact-hero-title {
         font-size: 1.7rem !important;
       }
+
       .contact-hero-desc {
         font-size: 0.86rem !important;
       }
+
       .contact-channel-val {
         font-size: 0.86rem !important;
       }
+
       .map-hours-list li span,
       .map-hours-list li strong {
         font-size: 0.77rem !important;
       }
+
       .map-hours-list li em {
         font-size: 0.72rem !important;
+      }
+
+      /* Support Cards 393px / 375px */
+      .contact-support-grid {
+        gap: 1.25rem !important;
+      }
+
+      .support-card-img-wrap {
+        height: 185px !important;
+      }
+
+      .support-card-body {
+        padding: 1.15rem 1rem !important;
+      }
+
+      .support-title {
+        font-size: 1.1rem !important;
+      }
+
+      .support-desc {
+        font-size: 0.85rem !important;
       }
     }
 
@@ -264,37 +431,69 @@
       .contact-hero-title {
         font-size: 1.55rem !important;
       }
+
       .contact-hero-desc {
         font-size: 0.82rem !important;
       }
+
       .contact-channel-item {
         grid-template-columns: 2.3rem 1fr !important;
         column-gap: 0.65rem !important;
         padding: 0.8rem 0.65rem !important;
       }
+
       .contact-channel-icon {
         width: 2.3rem !important;
         height: 2.3rem !important;
         font-size: 0.95rem !important;
       }
+
       .contact-channel-title {
         font-size: 0.66rem !important;
       }
+
       .contact-channel-val {
         font-size: 0.82rem !important;
       }
+
       .contact-map-info-card {
         padding: 1rem 0.75rem !important;
       }
+
       .map-hours-list li span,
       .map-hours-list li strong {
         font-size: 0.74rem !important;
       }
+
       .map-hours-list li em {
         font-size: 0.68rem !important;
       }
+
       .map-info-title {
         font-size: 0.98rem !important;
+      }
+
+      /* Support Cards 360px */
+      .contact-support-grid {
+        gap: 1.15rem !important;
+      }
+
+      .support-card-img-wrap {
+        height: 175px !important;
+      }
+
+      .support-title {
+        font-size: 1.05rem !important;
+      }
+
+      .support-desc {
+        font-size: 0.82rem !important;
+        line-height: 1.48 !important;
+      }
+
+      .btn-support-action {
+        padding: 0.65rem 0.85rem !important;
+        font-size: 0.82rem !important;
       }
     }
 
@@ -330,6 +529,7 @@
         max-width: none !important;
         gap: 1.25rem !important;
       }
+
       .contact-cta-actions .btn,
       .contact-cta-actions a {
         width: auto !important;
@@ -432,12 +632,6 @@
         <!-- RTL/LTR Button -->
         <button type="button" class="ctrl-btn js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)"
           title="Switch RTL/LTR">
-          <svg class="rtl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
           <span class="rtl-text font-bold text-xs rtl-badge-text">RTL</span>
         </button>
 
@@ -572,11 +766,6 @@
         </button>
 
         <button type="button" class="drawer-ctrl-item js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
           <span class="rtl-text font-bold">RTL</span>
           <span>Switch</span>
         </button>
@@ -607,81 +796,19 @@
       <div class="contact-hero-overlay"></div>
 
       <div class="container-custom">
-        <div class="contact-hero-grid">
-          <!-- Left: Direct Communication Desk -->
-          <div class="contact-hero-content">
-            <div class="contact-eyebrow">
-              <i class="fa-solid fa-headset" aria-hidden="true"></i>
-              <span>Atelier Concierge Desk</span>
-            </div>
-            <h1 class="contact-hero-title" id="contact-hero-heading">
-              Direct Laser Engraving Consultation &amp; Care
-            </h1>
-            <p class="contact-hero-desc">
-              Have questions about foreign language characters, medical alert icons, or shelter rescue orders? Speak
-              directly with our master bench engravers.
-            </p>
-
-            <!-- 3 Direct Contact Channel Cards -->
-            <div class="contact-channels-list">
-              <div class="contact-channel-item">
-                <div class="contact-channel-icon">
-                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                </div>
-                <div class="contact-channel-info">
-                  <span class="contact-channel-title">Direct Master Engraver Line</span>
-                  <a href="tel:+18008247387" class="contact-channel-val">+1 (800) 824-7387</a>
-                </div>
-                <span class="contact-channel-badge">
-                  <span class="badge-pulse"></span>
-                  <span>Live Desk Open</span>
-                </span>
-              </div>
-
-              <div class="contact-channel-item">
-                <div class="contact-channel-icon">
-                  <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>
-                </div>
-                <div class="contact-channel-info">
-                  <span class="contact-channel-title">Digital Proofing &amp; Vector Review</span>
-                  <a href="mailto:proofs@petengravingshop.com"
-                    class="contact-channel-val">proofs@petengravingshop.com</a>
-                </div>
-                <span class="contact-channel-badge">
-                  <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-                  <span>12m Avg Proof</span>
-                </span>
-              </div>
-
-              <div class="contact-channel-item">
-                <div class="contact-channel-icon">
-                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                </div>
-                <div class="contact-channel-info">
-                  <span class="contact-channel-title">Atelier Workshop &amp; Studio</span>
-                  <span class="contact-channel-val">742 Artisan Lane, Suite 400, Craft District, CA</span>
-                </div>
-                <span class="contact-channel-badge">
-                  <i class="fa-solid fa-door-open" aria-hidden="true"></i>
-                  <span>Mon-Fri 9-6</span>
-                </span>
-              </div>
-            </div>
+        <div class="contact-hero-center-wrap">
+          <div class="contact-eyebrow">
+            <i class="fa-solid fa-headset" aria-hidden="true"></i>
+            <span>Atelier Concierge Desk</span>
           </div>
+          <h1 class="contact-hero-title" id="contact-hero-heading">
+            Direct Laser Engraving Consultation &amp; Care
+          </h1>
+          <p class="contact-hero-desc">
+            Direct master engraver consultation, custom vector proofing, and emergency atelier support.
+          </p>
 
-          <!-- Right: Visual Workbench Card -->
-          <div class="contact-hero-visual">
-            <img src="assets/images/contact/p52.jpg"
-              alt="Master craftsperson reviewing digital vector pet tag engraving proofs in workshop"
-              class="contact-hero-img" width="600" height="480" loading="eager">
-            <div class="contact-telemetry-badge">
-              <div class="badge-pulse"></div>
-              <div>
-                <span class="badge-txt-primary">Average Reply Time: 12 Minutes</span>
-                <span class="badge-txt-sub">Verified Master Engraver On Duty</span>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -812,7 +939,7 @@
               </div>
               <button type="button" class="btn-support-action">
                 <i class="fa-solid fa-repeat" aria-hidden="true"></i>
-                <span>Start Free Re-Engrave</span>
+                <span>Start Re-Engrave</span>
               </button>
             </div>
           </article>
@@ -856,7 +983,7 @@
               </div>
               <button type="button" class="btn-support-action">
                 <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
-                <span>Apply For Shelter Grant</span>
+                <span> Shelter Grant</span>
               </button>
             </div>
           </article>
@@ -902,7 +1029,8 @@
             Visit Our Laser Engraving Atelier
           </h2>
           <p class="about-section-desc">
-            Drop by our craft workshop to preview solid billet alloys in person, test custom font strikes, or pick up same-day orders.
+            Drop by our craft workshop to preview solid billet alloys in person, test custom font strikes, or pick up
+            same-day orders.
           </p>
         </div>
 
@@ -941,12 +1069,14 @@
             <div class="map-pet-friendly-badge">
               <i class="fa-solid fa-paw" aria-hidden="true"></i>
               <div>
-                <strong>Pets Welcome!</strong> Bring your furry companion for instant on-collar sizing &amp; free organic treats.
+                <strong>Pets Welcome!</strong> Bring your furry companion for instant on-collar sizing &amp; free
+                organic treats.
               </div>
             </div>
 
             <!-- Navigation Button -->
-            <a href="https://maps.google.com/?q=742+Artisan+Lane+San+Francisco+CA" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-map-nav">
+            <a href="https://maps.google.com/?q=742+Artisan+Lane+San+Francisco+CA" target="_blank"
+              rel="noopener noreferrer" class="btn btn-primary btn-map-nav">
               <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i>
               <span>Get Live Google Directions</span>
             </a>
@@ -954,15 +1084,10 @@
 
           <!-- Right: Interactive Google Live Map -->
           <div class="contact-map-frame-wrap">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019019808381!2d-122.41941548468205!3d37.77492977975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus" 
-              width="100%" 
-              height="100%" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="PetTags&Co. Atelier Location on Google Maps">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019019808381!2d-122.41941548468205!3d37.77492977975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="PetTags&Co. Atelier Location on Google Maps">
             </iframe>
             <div class="map-live-pulse-badge">
               <span class="badge-pulse"></span>

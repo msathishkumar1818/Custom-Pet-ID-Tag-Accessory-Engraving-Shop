@@ -29,6 +29,44 @@
 
   <!-- Accessories Page Strictly Even Card & Button Alignment Engine (768px, 1024px & All Mobile) -->
   <style>
+    /* Hero Section: Centered Minimalist Presentation */
+    .accessories-hero-center-wrap {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      width: 100% !important;
+      max-width: 880px !important;
+      margin: 0 auto !important;
+    }
+
+    .accessories-eyebrow {
+      margin: 0 auto 1.15rem auto !important;
+    }
+
+    .accessories-hero-title {
+      text-align: center !important;
+      margin: 0 auto 0.85rem auto !important;
+    }
+
+    .accessories-hero-desc {
+      text-align: center !important;
+      margin: 0 auto 1.5rem auto !important;
+      max-width: 44rem !important;
+    }
+
+    .accessories-chip-row {
+      justify-content: center !important;
+      margin: 0 auto 1.5rem auto !important;
+    }
+
+    .accessories-stat-pills {
+      justify-content: center !important;
+      margin: 0 auto !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+      padding-top: 1.25rem !important;
+    }
+
     /* Add To Tag Rig Button - Constrained, Centered, Proportional (Never Stretched) */
     .btn-acc-action {
       width: 100% !important;
@@ -277,12 +315,6 @@
         <!-- RTL/LTR Button -->
         <button type="button" class="ctrl-btn js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)"
           title="Switch RTL/LTR">
-          <svg class="rtl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
           <span class="rtl-text font-bold text-xs rtl-badge-text">RTL</span>
         </button>
 
@@ -417,12 +449,6 @@
         </button>
 
         <button type="button" class="drawer-ctrl-item js-rtl-toggle" aria-label="Toggle Direction (LTR/RTL)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" style="width:16px;height:16px;">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
           <span class="rtl-text font-bold">RTL</span>
           <span>Switch</span>
         </button>
@@ -454,75 +480,44 @@
       <div class="accessories-hero-overlay"></div>
 
       <div class="container-custom">
-        <div class="accessories-hero-grid">
-          <!-- Left: Hero Headline & Filter Controls -->
-          <div class="accessories-hero-content">
-            <div class="accessories-eyebrow">
-              <i class="fa-solid fa-shield-virus" aria-hidden="true"></i>
-              <span>Zero-Failure Attachment Gear</span>
-            </div>
-            <h1 class="accessories-hero-title" id="acc-hero-heading">
-              Hardened Attachment Hardware &amp; Collar Silencers
-            </h1>
-            <p class="accessories-hero-desc">
-              A lost tag is a failed lifeline. We manufacture heavy-gauge 316 marine stainless rings, spring carabiners,
-              and shock-absorbing silicone bumpers tested for extreme wilderness pulls.
-            </p>
+        <div class="accessories-hero-center-wrap">
+          <div class="accessories-eyebrow">
+            <i class="fa-solid fa-shield-virus" aria-hidden="true"></i>
+            <span>Zero-Failure Attachment Gear</span>
+          </div>
+          <h1 class="accessories-hero-title" id="acc-hero-heading">
+            Hardened Attachment Hardware &amp; Collar Silencers
+          </h1>
+          <p class="accessories-hero-desc">
+            Heavy-gauge 316 marine stainless rings, locking carabiners, and shock-absorbing silicone bumpers tested for
+            extreme wilderness pulls.
+          </p>
 
-            <!-- Category Filter Chips -->
-            <div class="accessories-chip-row" role="tablist" aria-label="Accessory Categories">
-              <button type="button" class="accessory-chip active" role="tab" aria-selected="true">
-                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
-                <span>All Rigging</span>
-              </button>
-              <button type="button" class="accessory-chip" role="tab" aria-selected="false">
-                <i class="fa-solid fa-circle-notch" aria-hidden="true"></i>
-                <span>Split Rings</span>
-              </button>
-              <button type="button" class="accessory-chip" role="tab" aria-selected="false">
-                <i class="fa-solid fa-link" aria-hidden="true"></i>
-                <span>Quick Carabiners</span>
-              </button>
-              <button type="button" class="accessory-chip" role="tab" aria-selected="false">
-                <i class="fa-solid fa-bell-slash" aria-hidden="true"></i>
-                <span>Silent Bumpers</span>
-              </button>
-              <button type="button" class="accessory-chip" role="tab" aria-selected="false">
-                <i class="fa-solid fa-ring" aria-hidden="true"></i>
-                <span>Adventure Collars</span>
-              </button>
-            </div>
-
-            <!-- 3-Point Fast Telemetry Pills -->
-            <div class="accessories-stat-pills">
-              <div class="acc-pill-item">
-                <i class="fa-solid fa-weight-hanging acc-pill-icon" aria-hidden="true"></i>
-                <span class="acc-pill-text">180 lbs Pull Force Tested</span>
-              </div>
-              <div class="acc-pill-item">
-                <i class="fa-solid fa-volume-xmark acc-pill-icon" aria-hidden="true"></i>
-                <span class="acc-pill-text">0 dB Clink-Free Silence</span>
-              </div>
-              <div class="acc-pill-item">
-                <i class="fa-solid fa-water acc-pill-icon" aria-hidden="true"></i>
-                <span class="acc-pill-text">100% Saltwater Impervious</span>
-              </div>
-            </div>
+          <!-- Category Filter Chips -->
+          <div class="accessories-chip-row" role="tablist" aria-label="Accessory Categories">
+            <button type="button" class="accessory-chip active" role="tab" aria-selected="true">
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              <span>All Rigging</span>
+            </button>
+            <button type="button" class="accessory-chip" role="tab" aria-selected="false">
+              <i class="fa-solid fa-circle-notch" aria-hidden="true"></i>
+              <span>Split Rings</span>
+            </button>
+            <button type="button" class="accessory-chip" role="tab" aria-selected="false">
+              <i class="fa-solid fa-link" aria-hidden="true"></i>
+              <span>Quick Carabiners</span>
+            </button>
+            <button type="button" class="accessory-chip" role="tab" aria-selected="false">
+              <i class="fa-solid fa-bell-slash" aria-hidden="true"></i>
+              <span>Silent Bumpers</span>
+            </button>
+            <button type="button" class="accessory-chip" role="tab" aria-selected="false">
+              <i class="fa-solid fa-ring" aria-hidden="true"></i>
+              <span>Adventure Collars</span>
+            </button>
           </div>
 
-          <!-- Right: Visual Spotlight Card -->
-          <div class="accessories-hero-visual">
-            <img src="assets/images/accessories/p41.jpg"
-              alt="Active companion dog wearing solid stainless steel tag and hardened locking carabiner"
-              class="accessories-hero-img" width="600" height="460" loading="eager">
-            <div class="accessories-floating-badge">
-              <div class="badge-pulse"></div>
-              <div>
-                <span class="badge-txt-primary">Lab Certified 180 lbs Load</span>
-                <span class="badge-txt-sub">Tempered Marine Spring Steel</span>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -707,7 +702,7 @@
             </div>
             <div class="silencer-body">
               <div>
-                <h3 class="silencer-title">Stealth Matte Black Bumper</h3>
+                <h3 class="silencer-title">Stealth Matte Bumper</h3>
                 <p class="silencer-desc">
                   Ultra-low profile design that encases the outer rim. Completely silences metal-on-metal collision with
                   water bowls and leash snaps.
@@ -723,7 +718,7 @@
                   </div>
                   <div>
                     <span class="silencer-spec-lbl">Weather</span>
-                    <span class="silencer-spec-val">-40° to 120°C</span>
+                    <span class="silencer-spec-val">120°C</span>
                   </div>
                 </div>
               </div>
@@ -750,7 +745,7 @@
             </div>
             <div class="silencer-body">
               <div>
-                <h3 class="silencer-title">Luminescent Night-Glow Bumper</h3>
+                <h3 class="silencer-title">Luminescent Night Bumper</h3>
                 <p class="silencer-desc">
                   Charges in 10 minutes of sunlight to emit a vivid emerald beacon all night long. Keeps off-leash pets
                   instantly spotted in dark yards and campsites.
