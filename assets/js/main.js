@@ -47,16 +47,23 @@
   function updateThemeUI(isDark) {
     darkToggleBtns.forEach(btn => {
       btn.setAttribute('aria-label', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+      btn.setAttribute('title', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
       const sunIcon = btn.querySelector('.icon-sun, .light-icon');
       const moonIcon = btn.querySelector('.icon-moon, .dark-icon');
       if (sunIcon && moonIcon) {
         if (isDark) {
-          sunIcon.style.display = 'block';
-          moonIcon.style.display = 'none';
-        } else {
+          // Dark Mode: display Moon icon (reflects dark state)
           sunIcon.style.display = 'none';
           moonIcon.style.display = 'block';
+        } else {
+          // Light Mode: display Sun icon (reflects light state)
+          sunIcon.style.display = 'block';
+          moonIcon.style.display = 'none';
         }
+      }
+      const labelSpan = btn.querySelector('span:not(.rtl-text)');
+      if (labelSpan && !btn.classList.contains('ctrl-btn')) {
+        labelSpan.textContent = isDark ? 'Dark Mode' : 'Light Mode';
       }
     });
   }

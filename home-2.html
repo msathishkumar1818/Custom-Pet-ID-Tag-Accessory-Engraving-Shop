@@ -13,6 +13,18 @@
   <!-- Core External Stylesheets (Zero Inline CSS) -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('pet_tag_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- Page-Specific Mobile Alignment Engine (Strictly Scoped to home-2.html) -->
   <style>
@@ -467,12 +479,7 @@
 
         <!-- Dark Mode Toggle Button (#000000 Strict) -->
         <button type="button" class="ctrl-btn js-dark-toggle" aria-label="Toggle Dark Mode" title="Switch Theme">
-          <!-- Moon Icon for Light Mode -->
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <!-- Sun Icon for Dark Mode -->
+          <!-- Sun Icon for Light Mode -->
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
@@ -485,6 +492,11 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
+          <!-- Moon Icon for Dark Mode -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
 
         <!-- CTA Action Button -->
@@ -496,17 +508,6 @@
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </a>
-
-        <!-- Mobile Drawer Toggle Button -->
-        <button type="button" class="btn-mobile-toggle js-mobile-toggle" aria-label="Open Mobile Menu"
-          aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
       </div>
 
     </div>
@@ -1192,13 +1193,13 @@
       <div class="footer-top-grid">
         <!-- Brand Summary -->
         <div class="footer-brand-wrap">
-          <div class="footer-brand">
+          <a href="index.html" class="footer-brand" aria-label="PetTags&amp;Co. Home">
             <img src="assets/images/icons/logo.png" alt="Pet Tag Logo" class="footer-logo">
             <div class="footer-brand-text">
               <h3>PetTags<span>&amp;Co.</span></h3>
               <p>Modern Tag Lab</p>
             </div>
-          </div>
+          </a>
           <p class="footer-bio">
             Crafting premium, deep-laser-engraved ID tags and luxury accessories to keep your beloved pets safe,
             stylish, and adventure-ready.
@@ -1298,7 +1299,7 @@
 
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom-bar">
-        <p>&copy; 2026 PetTags&amp;Co. All rights reserved.</p>
+        <p>&copy; 2026 <a href="index.html" class="footer-bottom-brand-link">PetTags&amp;Co.</a> All rights reserved.</p>
         <ul class="footer-bottom-links">
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms of Service</a></li>
